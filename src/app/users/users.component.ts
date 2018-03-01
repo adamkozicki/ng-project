@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { UsersService } from './users.service'
 
 @Component({
   selector: 'app-users',
@@ -8,30 +7,11 @@ import { UsersService } from './users.service'
 })
 export class UsersComponent implements OnInit {
 
-  users = [];
-
-  constructor(private usersService:UsersService) {
-
+  constructor() {
    }
 
   ngOnInit() {
-    this.users = this.usersService.getUsers();
-    console.log(this.users);
   }
 
-  edited = {};
-
-  edit(user) {
-    this.edited = Object.assign({}, user);
-  }
-
-  createNew() {
-    let newUser = this.usersService.createUser();
-    this.edited = newUser;
-  }
-
-  save(user){
-    this.usersService.saveUser(user);
-  }
 
 }

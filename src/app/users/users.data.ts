@@ -6,7 +6,7 @@ export default [
       mail: "adamkozicki@op.pl",
       pass: "123",
       address: {
-        street: "Armii Krajowej",
+        street: "al. Armii Krajowej",
         numberOfBuilding: "4",
         numberOfFlat: "40",
         city: "Radzymin",
@@ -15,7 +15,7 @@ export default [
       },
       phone: "513732238",
       registerDate: "2018-03-01",
-      profileImg: 'img1.img'
+      profileImg: 'assets/avatars/on.jpg'
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export default [
       },
       phone: "500018488",
       registerDate: "2018-03-01",
-      profileImg: 'img2.img'
+      profileImg: 'assets/avatars/ona.jpg'
     },
     {
       id: 3,
@@ -51,6 +51,6 @@ export default [
       },
       phone: "507123123",
       registerDate: "2017-02-01",
-      profileImg: 'img3.img'
+      profileImg: 'assets/avatars/ona2.jpg'
     }
   ]

@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users.component';
 import { UsersService } from './users.service';
 
-import usersData from './users.data'
+import usersData from './users.data';
+import { UsersSearchComponent } from './users-search.component';
+import { UsersListComponent } from './users-list.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import usersData from './users.data'
     FormsModule
   ],
   declarations: [
-    UsersComponent
+    UsersComponent,
+    UsersSearchComponent,
+    UsersListComponent
   ],
   providers: [
     { provide: UsersService, useClass: UsersService },
