@@ -1,13 +1,35 @@
 import { Injectable, Inject, Optional } from '@angular/core';
+import { Http } from '@angular/http';
+import {Subject, Observable} from 'rxjs'
+
+// utwórz tutaj interface
 
 @Injectable()
 export class UsersService {
 
-  constructor(@Optional() @Inject('UsersData') usersData ) {
-    this.users = usersData === null ? this.users : usersData;
+  server_url = 'http://localhost:3000/users/';
+
+  constructor(private http:Http) {
    }
 
   users = []
+
+  usersStream$ = new Subject<any[]>();
+
+  getUsersStream() {
+    return this.usersStream$.startWith(this.users);
+  }
+
+  getUsers() {
+    return this.http.get(this.server_url)
+      .map(response=>response.json())
+      .subscribe(users=> {
+        this.users = users;
+        this.usersStream$.next(this.users);
+      })     
+  }
+
+
 
   saveUser(user){
     if(user.id){
@@ -39,10 +61,6 @@ export class UsersService {
       registerDate: new Date()
     }
     return Object.assign({}, newUser);
-  }
-
-  getUsers() {
-    return this.users;
   }
 
 }
