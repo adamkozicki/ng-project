@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from './users.service'
+import { UsersService, Users } from './users.service'
 
 @Component({
   selector: 'app-users-list',
@@ -15,8 +15,10 @@ export class UsersListComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.users = this.usersService.getUsers();
-    console.log(this.users);
+    this.usersService.getUsersStream()
+    .subscribe((users:Users[]) => {
+      this.users = users;
+    })
   }
 
   edited = {};

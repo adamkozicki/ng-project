@@ -1,7 +1,7 @@
 {
     "users": [
         {
-      "id": 1,
+      "id": "1",
       "name": "Adam",
       "surname": "Kozicki",
       "mail": "adamkozicki@op.pl",
@@ -19,7 +19,7 @@
       "profileImg": "assets/avatars/on.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Marta",
       "surname": "Kozicka",
       "mail": "marta.41@op.pl",
@@ -37,7 +37,7 @@
       "profileImg": "assets/avatars/ona.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Barbara",
       "surname": "Krupińska",
       "mail": "barbara_123@op.pl",
