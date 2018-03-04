@@ -44,10 +44,10 @@ export class UsersService {
   }
 
   getUser(id){
-    let url = 'http://localhost:3000/users/' + id;
+    let url = `http://localhost:3000/users/${id}`;
 
     return this.http.get(url)
-      .map((response:Response)=> response.json() )
+      .map((response:Response)=> response.json() );
   }
 
 

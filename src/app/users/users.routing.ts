@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routesConfig:Routes = [
   {path: 'users', component: UsersComponent},
-  {path: 'users/user', component: UserDetailComponent},
+  {path: 'users/user/:id', component: UserDetailComponent},
 ]
 
 export const routerModule = RouterModule.forChild(routesConfig);

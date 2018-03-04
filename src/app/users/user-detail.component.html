@@ -3,7 +3,7 @@
     <app-user-card [user]="user" class="card" *ngIf="user"></app-user-card>
   </div>
   <div class="col">
-    <h4 class="display-3 mb-2 float-xs-right">Dane użytkownika</h4>
-    
+    <h4 class="display-5 mb-2 float-xs-right">Dane użytkownika</h4>
+    <app-user-data [user]="user" *ngIf="user"></app-user-data>
   </div>
 </div>
