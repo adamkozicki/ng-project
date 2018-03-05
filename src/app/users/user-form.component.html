@@ -1,0 +1,146 @@
+<div *ngIf="user">
+  <form #formRef="ngForm" novalidate="true" (ngSubmit)="save(formRef.valid, user)">
+  <div class="form-group">
+    <label>Imię:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="user.name" name="name" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Nazwisko:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="surname.name" name="surname" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>E-mail:</label>
+    <input type="email" #nameRef="ngModel" required minlength="5" [(ngModel)]="mail.name" name="mail" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Ulica:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="address.street.name" name="address.street" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Numer budynku:</label>
+    <input type="text" #nameRef="ngModel" required minlength="1" [(ngModel)]="address.numberOfBuilding.name" name="address.numberOfBuilding" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Numer mieszkania:</label>
+    <input type="text" #nameRef="ngModel" [(ngModel)]="address.numberOfFlat.name" name="address.numberOfFlat" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Miejscowość:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="address.city.name" name="address.city" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Województwo:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="address.province.name" name="address.province" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Kraj:</label>
+    <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="address.country.name" name="address.country" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Telefon:</label>
+    <input type="text" #nameRef="ngModel" [(ngModel)]="phone.name" name="phone" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Data rejestracjii:</label>
+    <input type="text" #nameRef="ngModel" required minlength="10" [(ngModel)]="registerDate.name" name="registerDate" class="form-control">
+    <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.required">
+            To pole jest wymagane
+      </div>
+      <div class="form-control-feedback" 
+            *ngIf="nameRef.errors?.minlength">
+            To pole musi mieć przynajmniej {{nameRef.errors.minlength.requiredLength}} znaki
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Zdjęcie profilowe:</label>
+    <input type="text" #nameRef="ngModel" required minlength="3" [(ngModel)]="profileImg.name" name="profileImg" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success float-xs-right" type="submit">Zapisz</button>
+  </div>
+  </form>
+</div>

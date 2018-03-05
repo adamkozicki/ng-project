@@ -10,6 +10,8 @@ import { UsersSearchComponent } from './users-search.component';
 import { UsersListComponent } from './users-list.component';
 import { UserDetailComponent } from './user-detail.component';
 import { UserCardComponent } from './user-card.component';
+import { UserDataComponent } from './user-data.component';
+import { UserFormComponent } from './user-form.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { UserCardComponent } from './user-card.component';
     UsersListComponent,
     UserDetailComponent,
     UserCardComponent,
+    UserDataComponent,
+    UserFormComponent,
   ],
   providers: [
     { provide: UsersService, useClass: UsersService },

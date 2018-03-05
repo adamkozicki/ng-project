@@ -4,7 +4,6 @@ import {Subject, Observable} from 'rxjs';
 import 'rxjs/add/operator/map'
 
 export interface Users{
-      id: string,
       name: string,
       surname: string,
       mail: string,
@@ -53,35 +52,29 @@ export class UsersService {
 
 
   saveUser(user){
+    let request; 
     if(user.id){
-      let index = this.users.findIndex((old_user) => (
-        old_user.id === user.id
-      ))
-      this.users.splice(index, 1, user)
+      request = this.http.put(this.server_url + user.id, user)
     }else{
-      user.id = Date.now();
-      this.users.push(user);
+      request = this.http.post(this.server_url, user)
     }
+      return request.map(response => response.json())
+      .do( user => {
+        this.getUsers()
+      })
   }
 
-  createUser(){
-    var newUser = {
-      name: "",
-      surname: "",
-      mail: "",
-      pass: "",
-      address: {
-        street: "",
-        numberOfBuilding: "",
-        numberOfFlat: "",
-        city: "",
-        province: "",
-        country: ""
-      },
-      phone: "",
-      registerDate: new Date()
-    }
-    return Object.assign({}, newUser);
+  createUser():Users {
+    return {
+      name: '',
+      surname: '',
+      mail: '',
+      pass: '',
+      address: [],
+      phone: '',
+      registerDate: '',
+      profileImg: ''
+    };
   }
 
 }
