@@ -17,18 +17,17 @@ export class UserCardComponent implements OnInit {
   }
 
   ngOnInit() {
-   console.log("user-card")
-   console.log(this.user)
     this.activeRoute.params.subscribe(params => {
       let id = parseInt(params['id']);
       if (id) {
-        this.usersService.getUser(id)
-            .subscribe( (user:Users) => {
+        this.usersService.getUserStream(id)
+            .subscribe( (user) => {
               this.user = user
             })
       }
     })
   }
+  
 
   // ngOnInit() {
 

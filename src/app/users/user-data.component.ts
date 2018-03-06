@@ -22,7 +22,7 @@ import { UsersService, Users } from './users.service'
       <div class="card-header">
         <span>Adres</span>
       </div>
-          <p class="card-text">{{ user.address.city + ', ' + user.address.street + ' ' +  user.address.numberOfBuilding + '/' + user.address.numberOfFlat}}</p>
+          <p class="card-text">{{ address.city + ', ' + address.street + ' ' +  address.numberOfBuilding + '/' + address.numberOfFlat}}</p>
     </div>
     <div class="card">
       <div class="card-header">
@@ -35,6 +35,10 @@ import { UsersService, Users } from './users.service'
         <span>Data rejestracji</span>
       </div>
           <p class="card-text">{{ user.registerDate }}</p>
+    </div>
+    <br>
+    <div class="form-group">
+      <button class="btn btn-success float-xs-right" (click)="edit(user)">Edytuj</button>
     </div>
   </div>
   `,
@@ -56,6 +60,12 @@ export class UserDataComponent implements OnInit {
 
   user
 
+  address
+
+  edit(user) {
+    this.router.navigate(['users/user',user.id,'edit'], { queryParams: { 'id': user.id }})
+  }
+
   constructor(private activeRoute: ActivatedRoute,
     private usersService: UsersService,
     private router:Router) {
@@ -66,9 +76,10 @@ export class UserDataComponent implements OnInit {
     this.activeRoute.params.subscribe(params => {
       let id = parseInt(params['id']);
       if (id) {
-        this.usersService.getUser(id)
-            .subscribe( (user:Users) => {
+        this.usersService.getUserStream(id)
+            .subscribe( (user) => {
               this.user = user
+              this.address = this.user.address
             })
       }
     })

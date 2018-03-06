@@ -5,11 +5,18 @@ import { UsersService, Users } from './users.service'
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  styles: [`
+    input.ng-dirty.ng-invalid, 
+    textarea.ng-dirty.ng-invalid,
+    input.ng-touched.ng-invalid, 
+    textarea.ng-touched.ng-invalid{
+      border: 1px solid red;
+    }
+  `]
 })
 export class UserFormComponent implements OnInit {
 
-  user: Users;
+  user;
 
   save(valid, user) {
     if(!valid){
@@ -17,7 +24,7 @@ export class UserFormComponent implements OnInit {
     }
     this.usersService.saveUser(user)
     .subscribe( user => {
-      this.router.navigate(['user',user.id]);
+      this.router.navigate(['users/user',user.id]);
     })
   }
 
@@ -26,11 +33,11 @@ export class UserFormComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit() {
-    this.activeRoute.params.subscribe(params => {
+    this.activeRoute.queryParams.subscribe(params => {
       let id = parseInt(params['id']);
       if (id) {
-        this.usersService.getUser(id)
-            .subscribe( (user:Users) => {    
+        this.usersService.getUserStream(id)
+            .subscribe( (user) => {    
               this.user = Object.assign({},user)
             })
       }else{

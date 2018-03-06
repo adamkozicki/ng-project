@@ -1,7 +1,8 @@
-import { Injectable, Inject, Optional } from '@angular/core';
+import { Injectable, Inject, Optional,EventEmitter } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import {Subject, Observable} from 'rxjs';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
 
 export interface Users{
       name: string,
@@ -24,13 +25,24 @@ export class UsersService {
 
   users = []
 
+  user = []
+
   usersStream$ = new Subject<Users[]>();
+
+  userStream$ = new Subject<Users[]>();
 
   getUsersStream() {
     if(!this.users.length){
       this.getUsers()
     }
     return this.usersStream$.startWith(this.users);
+  }
+
+  getUserStream(id) {
+    if(!this.user.length){
+      this.getUser(id)
+    }
+    return this.userStream$.startWith(this.user);
   }
 
   getUsers(){
@@ -46,7 +58,14 @@ export class UsersService {
     let url = `http://localhost:3000/users/${id}`;
 
     return this.http.get(url)
-      .map((response:Response)=> response.json() );
+              .map( response => response.json())
+              .subscribe( user => {
+                this.user = user;
+                this.userStream$.next(this.user)
+              })
+
+    // return this.http.get(url)
+    //   .map((response:Response)=> response.json() );
   }
 
 
@@ -58,9 +77,9 @@ export class UsersService {
     }else{
       request = this.http.post(this.server_url, user)
     }
-      return request.map(response => response.json())
+      return request.map((response:Response) => response.json())
       .do( user => {
-        this.getUsers()
+        this.getUser(user.id)
       })
   }
 

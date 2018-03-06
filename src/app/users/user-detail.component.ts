@@ -6,7 +6,7 @@ import { UsersService, Users } from './users.service';
   template: `
     <div class="row mt-1">
       <div class="col">
-        <app-user-card class="card"></app-user-card>
+        <app-user-card  class="card"></app-user-card>
       </div>
       <div class="col">
         <h4 class="display-5 mb-2 float-xs-right">Dane użytkownika</h4>
@@ -22,7 +22,7 @@ export class UserDetailComponent implements OnInit {
   constructor(private userService:UsersService) { }
 
   ngOnInit() {
-
+    console.log('adam')
   }
 
 }

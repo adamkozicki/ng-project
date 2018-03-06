@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService, Users } from './users.service'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -10,15 +11,20 @@ export class UsersListComponent implements OnInit {
 
   users = [];
 
-  constructor(private usersService:UsersService) {
+  constructor(private usersService:UsersService,
+              private activeRoute:ActivatedRoute) {
 
    }
 
   ngOnInit() {
-    this.usersService.getUsersStream()
-    .subscribe((users:Users[]) => {
-      this.users = users;
+    this.activeRoute.params.subscribe(params => {
+      console.log(params)
+      this.usersService.getUsersStream()
+      .subscribe((users:Users[]) => {
+        this.users = users;
+      })
     })
+    
   }
 
   edited = {};

@@ -1,8 +1,8 @@
 {
-    "users": [
-        {
+  "users": [
+    {
       "id": "1",
-      "name": "Adam",
+      "name": "Adama",
       "surname": "Kozicki",
       "mail": "adamkozicki@op.pl",
       "pass": "123",
@@ -22,11 +22,11 @@
       "id": "2",
       "name": "Marta",
       "surname": "Kozicka",
-      "mail": "marta.41@op.pl",
+      "mail": "marta@marta.pl",
       "pass": "1234",
       "address": {
         "street": "Armii Krajowej",
-        "numberOfBuilding": "4",
+        "numberOfBuilding": "5",
         "numberOfFlat": "40",
         "city": "Radzymin",
         "province": "mazowieckie",
@@ -44,15 +44,15 @@
       "pass": "12345",
       "address": {
         "street": "Brzozowa",
-        "numberOfBuilding": "27B",
+        "numberOfBuilding": "27C",
         "numberOfFlat": "-",
         "city": "Marki",
         "province": "mazowieckie",
         "country": "Polska"
       },
-      "phone": "507123123",
-      "registerDate": "2017-02-01",
+      "phone": "500183183",
+      "registerDate": "2018-03-01",
       "profileImg": "assets/avatars/ona2.jpg"
     }
-    ]
+  ]
 }
