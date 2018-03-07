@@ -17,23 +17,23 @@ import { UsersService, Users } from './users.service'
 export class UserFormComponent implements OnInit {
 
   user;
-
+  
   save(valid, user) {
     if(!valid){
       return;
     }
     this.usersService.saveUser(user)
-    .subscribe( user => {
-      this.router.navigate(['users/user',user.id]);
-    })
-  }
+      .subscribe( user => {
+        this.router.navigate(['users',user.id]);
+      })
+    }
 
   constructor(private activeRoute: ActivatedRoute,
     private usersService: UsersService,
     private router:Router) { }
 
   ngOnInit() {
-    this.activeRoute.queryParams.subscribe(params => {
+    this.activeRoute.params.subscribe(params => {
       let id = parseInt(params['id']);
       if (id) {
         this.usersService.getUserStream(id)

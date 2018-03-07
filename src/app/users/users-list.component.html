@@ -1,16 +1,16 @@
 <div class="card-deck">
-  <div class="card" *ngFor="let user of users" [routerLink]="['user', user.id]">
+  <div class="card" *ngFor="let user of users | async" [routerLink]="[user.id]">
     <div>
       <div class="text-center">
         <img class="card-img-top" src="{{ user.profileImg }}" alt="Card image cap">
       </div>
       <div class="card-block">
-        <h5 class="card-title"><a [routerLink]="['user', user.id]"> {{ user.name + ' ' + user.surname }} </a></h5>
+        <h5 class="card-title"><a [routerLink]="[user.id]"> {{ user.name + ' ' + user.surname }} </a></h5>
         <p class="card-text">e-mail: {{user.mail}}</p>
         <p class="card-text">phone: {{user.phone}}</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Zarejestrowany: {{user.registerDate}}</small>
+        <small class="text-muted text-muted-user">Zarejestrowany: {{user.registerDate}}</small>
       </div>
     </div>
   </div>

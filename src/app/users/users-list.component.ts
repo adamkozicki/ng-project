@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersService, Users } from './users.service'
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UsersService, Users } from './users.service'
 
 @Component({
   selector: 'app-users-list',
@@ -9,37 +9,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UsersListComponent implements OnInit {
 
-  users = [];
+  users
 
   constructor(private usersService:UsersService,
               private activeRoute:ActivatedRoute) {
-
    }
 
   ngOnInit() {
-    this.activeRoute.params.subscribe(params => {
-      console.log(params)
-      this.usersService.getUsersStream()
-      .subscribe((users:Users[]) => {
-        this.users = users;
-      })
-    })
-    
+      this.users = this.usersService.getUsersStream()
+
+    console.log("adam")
+      // this.usersService.getUsersStream()
+      // .subscribe((users:Users[]) => {
+      //   this.users = users;
+      // })
   }
-
-  edited = {};
-
-  edit(user) {
-    this.edited = Object.assign({}, user);
-  }
-
-  createNew() {
-    let newUser = this.usersService.createUser();
-    this.edited = newUser;
-  }
-
-  save(user){
-    this.usersService.saveUser(user);
-  }
-
 }

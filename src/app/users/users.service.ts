@@ -4,12 +4,21 @@ import {Subject, Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
+interface Address {
+  street: string,
+  numberOfBuilding: string,
+  numberOfFlat: number,
+  city: string,
+  province: string,
+  country: string
+}
+
 export interface Users{
       name: string,
       surname: string,
       mail: string,
       pass: string,
-      address: any[],
+      address: Address,
       phone: string,
       registerDate: string,
       profileImg: string
@@ -63,12 +72,7 @@ export class UsersService {
                 this.user = user;
                 this.userStream$.next(this.user)
               })
-
-    // return this.http.get(url)
-    //   .map((response:Response)=> response.json() );
   }
-
-
 
   saveUser(user){
     let request; 
@@ -77,9 +81,10 @@ export class UsersService {
     }else{
       request = this.http.post(this.server_url, user)
     }
-      return request.map((response:Response) => response.json())
+    return request.map((response:Response) => response.json())
       .do( user => {
         this.getUser(user.id)
+        this.getUsers()
       })
   }
 
@@ -89,7 +94,14 @@ export class UsersService {
       surname: '',
       mail: '',
       pass: '',
-      address: [],
+      address: {
+        street: '',
+        numberOfBuilding: '',
+        numberOfFlat: null,
+        city: '',
+        province: '',
+        country: ''
+      },
       phone: '',
       registerDate: '',
       profileImg: ''

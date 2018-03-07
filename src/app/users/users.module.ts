@@ -12,6 +12,7 @@ import { UserDetailComponent } from './user-detail.component';
 import { UserCardComponent } from './user-card.component';
 import { UserDataComponent } from './user-data.component';
 import { UserFormComponent } from './user-form.component';
+import { UsersMainComponent } from './users-main.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { UserFormComponent } from './user-form.component';
     UserCardComponent,
     UserDataComponent,
     UserFormComponent,
+    UsersMainComponent,
   ],
   providers: [
     { provide: UsersService, useClass: UsersService },

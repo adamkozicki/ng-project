@@ -2,19 +2,19 @@
   "users": [
     {
       "id": "1",
-      "name": "Adama",
+      "name": "Adam",
       "surname": "Kozicki",
       "mail": "adamkozicki@op.pl",
       "pass": "123",
       "address": {
         "street": "al. Armii Krajowej",
         "numberOfBuilding": "4",
-        "numberOfFlat": "40",
+        "numberOfFlat": 40,
         "city": "Radzymin",
         "province": "mazowieckie",
         "country": "Polska"
       },
-      "phone": "513732238",
+      "phone": "513732237",
       "registerDate": "2018-03-01",
       "profileImg": "assets/avatars/on.jpg"
     },
@@ -27,7 +27,7 @@
       "address": {
         "street": "Armii Krajowej",
         "numberOfBuilding": "5",
-        "numberOfFlat": "40",
+        "numberOfFlat": 40,
         "city": "Radzymin",
         "province": "mazowieckie",
         "country": "Polska"
@@ -45,7 +45,7 @@
       "address": {
         "street": "Brzozowa",
         "numberOfBuilding": "27C",
-        "numberOfFlat": "-",
+        "numberOfFlat": null,
         "city": "Marki",
         "province": "mazowieckie",
         "country": "Polska"
@@ -53,6 +53,42 @@
       "phone": "500183183",
       "registerDate": "2018-03-01",
       "profileImg": "assets/avatars/ona2.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Piotr",
+      "surname": "Bińkowski",
+      "mail": "piobin@piobin.pl",
+      "pass": "",
+      "address": {
+        "street": "Brzozowa",
+        "numberOfBuilding": "27C",
+        "numberOfFlat": null,
+        "city": "Marki",
+        "province": "mazowieckie",
+        "country": "Polska"
+      },
+      "phone": "500123123",
+      "registerDate": "2018-03-07",
+      "profileImg": "assets/avatars/ona2.jpg"
+    },
+    {
+      "name": "Łukasz",
+      "surname": "Pyra",
+      "mail": "l@p.pl",
+      "pass": "",
+      "address": {
+        "street": "Błotna",
+        "numberOfBuilding": "15",
+        "numberOfFlat": "12",
+        "city": "Zadroże",
+        "province": "mazowieckie",
+        "country": "Polska"
+      },
+      "phone": "123123123",
+      "registerDate": "2018-03-07",
+      "profileImg": "assets/avatars/ona.jpg",
+      "id": "5"
     }
   ]
 }

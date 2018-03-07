@@ -1,4 +1,4 @@
-<div *ngIf="user"> 
+<div class="card-user-settings" *ngIf="user"> 
   <div class="text-center">
     <img class="card-img-top" src="{{ user.profileImg }}" alt="Card image cap">
   </div>
@@ -10,4 +10,11 @@
   <div class="card-footer">
     <small class="text-muted">Zarejestrowany: {{user.registerDate}}</small>
   </div>
+</div>
+<div *ngIf="!user"> 
+  <div class="text-center">
+    <img class="card-img-top" src="assets/avatars/on.jpg" alt="Card image cap">
+  </div>
+  <div class="text-center">
+    <h5 class="card-title"><a [routerLink]="['user', user.id]"> Tworzenie nowego użytkownika </a></h5>
 </div>

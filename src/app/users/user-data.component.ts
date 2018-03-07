@@ -22,7 +22,7 @@ import { UsersService, Users } from './users.service'
       <div class="card-header">
         <span>Adres</span>
       </div>
-          <p class="card-text">{{ address.city + ', ' + address.street + ' ' +  address.numberOfBuilding + '/' + address.numberOfFlat}}</p>
+          <p *ngIf="address.city" class="card-text">{{ address.city + ', ' + address.street + ' ' +  address.numberOfBuilding + '/' + address.numberOfFlat}}</p>
     </div>
     <div class="card">
       <div class="card-header">
@@ -63,7 +63,7 @@ export class UserDataComponent implements OnInit {
   address
 
   edit(user) {
-    this.router.navigate(['users/user',user.id,'edit'], { queryParams: { 'id': user.id }})
+    this.router.navigate(['users/user',user.id,'edit'])
   }
 
   constructor(private activeRoute: ActivatedRoute,
