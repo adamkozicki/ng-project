@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "name": "Adam",
+      "name": "Adama",
       "surname": "Kozicki",
       "mail": "adamkozicki@op.pl",
       "pass": "123",
@@ -14,7 +14,7 @@
         "province": "mazowieckie",
         "country": "Polska"
       },
-      "phone": "513732237",
+      "phone": "500999999",
       "registerDate": "2018-03-01",
       "profileImg": "assets/avatars/on.jpg"
     },
@@ -70,25 +70,25 @@
       },
       "phone": "500123123",
       "registerDate": "2018-03-07",
-      "profileImg": "assets/avatars/ona2.jpg"
+      "profileImg": "assets/avatars/on.jpg"
     },
     {
-      "name": "Łukasz",
-      "surname": "Pyra",
-      "mail": "l@p.pl",
+      "id": "1520517766069",
+      "name": "Marcin",
+      "surname": "Pogorzelski",
+      "mail": "marcin@marcin.pl",
       "pass": "",
       "address": {
         "street": "Błotna",
-        "numberOfBuilding": "15",
-        "numberOfFlat": "12",
-        "city": "Zadroże",
-        "province": "mazowieckie",
+        "numberOfBuilding": "12",
+        "numberOfFlat": "21",
+        "city": "Zalążek",
+        "province": "podkarpackie",
         "country": "Polska"
       },
-      "phone": "123123123",
-      "registerDate": "2018-03-07",
-      "profileImg": "assets/avatars/ona.jpg",
-      "id": "5"
+      "phone": "500236694",
+      "registerDate": "2018-03-08",
+      "profileImg": "assets/avatars/on.jpg"
     }
   ]
 }

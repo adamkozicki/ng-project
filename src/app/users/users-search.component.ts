@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { UsersService } from './users.service'
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-users-search',
   template: `
-    <form>
+    <form [formGroup]="searchForm">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Słowa kluczowe">
+        <input type="text" formControlName="query" class="form-control" [(ngModel)] = "query" placeholder="Słowa kluczowe">
       </div>
     </form>
   `,
@@ -15,9 +15,23 @@ import { UsersService } from './users.service'
 })
 export class UsersSearchComponent implements OnInit {
 
-  constructor( ) {
-  }
+  searchForm:FormGroup
 
+  query
+
+  constructor(private userService: UsersService) { 
+    this.searchForm = new FormGroup({
+      'query': new FormControl('')
+    })
+  this.query = ""
+  this.searchForm.get('query').valueChanges
+    // .filter(query => query.length >= 1 )
+    .distinctUntilChanged()
+    .debounceTime(400)
+    .subscribe(query => {
+        this.userService.search(query)
+    })
+  }
 
   ngOnInit() {
   }

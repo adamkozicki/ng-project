@@ -28,6 +28,10 @@ export class UserFormComponent implements OnInit {
       })
     }
 
+  return(id){
+    this.router.navigate(['users',id]);
+  }
+
   constructor(private activeRoute: ActivatedRoute,
     private usersService: UsersService,
     private router:Router) { }

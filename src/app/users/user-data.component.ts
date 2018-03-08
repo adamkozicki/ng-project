@@ -39,6 +39,7 @@ import { UsersService, Users } from './users.service'
     <br>
     <div class="form-group">
       <button class="btn btn-success float-xs-right" (click)="edit(user)">Edytuj</button>
+      <button class="btn btn-danger float-xs-right" (click)="delete(user)">Usuń użytkownika</button>
     </div>
   </div>
   `,
@@ -66,6 +67,13 @@ export class UserDataComponent implements OnInit {
     this.router.navigate(['users/user',user.id,'edit'])
   }
 
+  delete(user) {
+    this.usersService.deleteUser(user)
+      .subscribe( user => {
+        this.router.navigate(['users']);
+      })
+  }
+
   constructor(private activeRoute: ActivatedRoute,
     private usersService: UsersService,
     private router:Router) {
@@ -81,6 +89,8 @@ export class UserDataComponent implements OnInit {
               this.user = user
               this.address = this.user.address
             })
+      }else{
+        this.router.navigate(['users'])
       }
     })
   }

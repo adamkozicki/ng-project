@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UsersComponent } from './users.component';
 import { UsersService } from './users.service';
-import { routerModule } from './users.routing'
+import { routerModule } from './users.routing';
 
 import usersData from './users.data';
 import { UsersSearchComponent } from './users-search.component';
@@ -19,6 +19,7 @@ import { UsersMainComponent } from './users-main.component';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     routerModule
   ],
   declarations: [

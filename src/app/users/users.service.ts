@@ -14,6 +14,7 @@ interface Address {
 }
 
 export interface Users{
+      id: string,
       name: string,
       surname: string,
       mail: string,
@@ -79,6 +80,7 @@ export class UsersService {
     if(user.id){
       request = this.http.put(this.server_url + user.id, user)
     }else{
+      user.id = Date.now().toString();
       request = this.http.post(this.server_url, user)
     }
     return request.map((response:Response) => response.json())
@@ -88,8 +90,22 @@ export class UsersService {
       })
   }
 
+  deleteUser(user){
+    let request; 
+    if(user.id){
+      request = this.http.delete(this.server_url + user.id)
+    }else{
+      return;
+    }
+    return request.map((response:Response) => response.json())
+      .do( user => {
+        this.getUsers()
+      })
+  }
+
   createUser():Users {
     return {
+      id: '',
       name: '',
       surname: '',
       mail: '',
@@ -106,6 +122,26 @@ export class UsersService {
       registerDate: '',
       profileImg: ''
     };
+  }
+
+  getUsersSearchStream(){
+    return Observable
+          .from(this.usersStream$)
+          .startWith(this.users)
+  }
+
+  search(query){
+    let url = `http://localhost:3000/users?q=${query}`
+  
+    this.http.get(url)
+    .map((response:Response)=>{
+      let data = response.json()
+      return data;
+    })
+    .do(users =>{ this.users = users })
+    .subscribe( users => {
+      this.usersStream$.next(this.users)
+    })
   }
 
 }
