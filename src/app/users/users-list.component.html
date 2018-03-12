@@ -1,5 +1,7 @@
+  <button class="btn btn-info btn-sm float-xs-right" (click)="open = !open">{{ (open? 'Ukryj dane kontaktowe' : 'Pokaż dane kontaktowe') }}</button>
+  
 <div class="row">
-  <div class="card-deck col-lg-3" *ngFor="let user of users | async" [routerLink]="[user.id]">
+  <div class="card-deck col-lg-3" *ngFor="let user of users | async">
     <div class="card">
       <div>
         <div class="text-center">
@@ -7,8 +9,9 @@
         </div>
         <div class="card-block">
           <h5 class="card-title"><a [routerLink]="[user.id]"> {{ user.name + ' ' + user.surname }} </a></h5>
-          <p class="card-text">e-mail: {{user.mail}}</p>
-          <p class="card-text">phone: {{user.phone}}</p>
+          <app-user-contact [(open)]="open" [user]="user"></app-user-contact>
+          <!--<p class="card-text">e-mail: {{user.mail}}</p>
+          <p class="card-text">phone: {{user.phone}}</p>-->
         </div>
         <div class="card-footer">
           <small class="text-muted text-muted-user">Zarejestrowany: {{user.registerDate}}</small>

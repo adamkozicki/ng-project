@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService, Users } from './users.service'
 
@@ -9,6 +9,9 @@ import { UsersService, Users } from './users.service'
 })
 export class UsersListComponent implements OnInit {
 
+  @Input()
+  open = false
+
   users
 
   constructor(private usersService:UsersService,
@@ -16,12 +19,6 @@ export class UsersListComponent implements OnInit {
    }
 
   ngOnInit() {
-      this.users = this.usersService.getUsersStream()
-
-    console.log("adam")
-      // this.usersService.getUsersStream()
-      // .subscribe((users:Users[]) => {
-      //   this.users = users;
-      // })
+    this.users = this.usersService.getUsersStream()
   }
 }

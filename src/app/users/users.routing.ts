@@ -20,7 +20,7 @@ const routesConfig:Routes = [
             {path:':id/edit', component: UserFormComponent }
           ]
         },      
-    ] },  
+    ] },    
 ]
 
 export const routerModule = RouterModule.forChild(routesConfig);
