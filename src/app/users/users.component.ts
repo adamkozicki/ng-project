@@ -5,7 +5,9 @@ import { UsersService, Users } from './users.service'
 @Component({
   selector: 'app-users',
   template: `
+  <div class="container">
    <router-outlet></router-outlet>
+  </div>
   `,
   styleUrls: ['./users.component.css']
 })

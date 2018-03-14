@@ -1,0 +1,26 @@
+<div class="row">
+  <app-panel class="card-deck col-lg-3" *ngFor="let person of persons">
+    <div class="card">
+      <h4 class="card-header">
+        <!--<app-panel-close></app-panel-close> -->
+        {{person}}
+      </h4>
+
+      <br>
+
+      <app-panel-date *ngFor="let date of dates">
+        <h6 class="card-header">{{date}}</h6>
+        <app-panel-invent *ngFor="let invent of invents">
+          {{invent}}
+        </app-panel-invent>
+        <div class="card-footer">
+          <input (keyup.enter)="
+        invents.push(itemNameRef.value);
+        itemNameRef.value = ''
+      " #itemNameRef class="form-control">
+        </div>
+      </app-panel-date>
+
+    </div>
+  </app-panel>
+</div>

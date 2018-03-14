@@ -13,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
           <div class="navbar-nav">
             <a class="nav-item nav-link active" routerLink="/users" routerLinkActive = "active">Użytkownicy <span class="sr-only">(current)</span></a>
           </div>
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="/inventory" routerLinkActive = "active">Inwentaryzacje <span class="sr-only">(current)</span></a>
+          </div>
         </div>
       </div>
     </nav>
