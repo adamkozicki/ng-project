@@ -1,5 +1,5 @@
 import { Component, ContentChild, OnInit, Input } from '@angular/core';
-import { PanelCloseComponent } from './panel-close.component';
+import { PanelInvCloseComponent } from './../panel-inv-close/panel-inv-close.component';
 
 @Component({
   selector: 'app-panel-base',
@@ -15,8 +15,8 @@ export class PanelBaseComponent implements OnInit {
   @Input()
   open = true
 
-  @ContentChild(PanelCloseComponent)
-  closeBtn:PanelCloseComponent
+  @ContentChild(PanelInvCloseComponent)
+  closeBtn:PanelInvCloseComponent
 
   ngAfterContentInit() {
     this.subscribeCloseBtns()

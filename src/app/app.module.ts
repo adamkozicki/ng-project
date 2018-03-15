@@ -14,7 +14,7 @@ import { PanelCloseComponent } from './ui/panel/panel-close.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    PanelCloseComponent,
+    PanelCloseComponent
   ],
   imports: [
     BrowserModule,

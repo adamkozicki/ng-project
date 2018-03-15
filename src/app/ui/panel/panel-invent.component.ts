@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PanelBaseComponent } from './panel-base.component'
 
 @Component({
@@ -13,7 +13,5 @@ import { PanelBaseComponent } from './panel-base.component'
   styles: []
 })
 export class PanelInventComponent extends PanelBaseComponent implements OnInit {
-
-
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, ContentChild } from '@angular/core';
-import { PanelCloseComponent } from './../ui/panel/panel-close.component'
 
 @Component({
   selector: 'app-inventory-calendar',

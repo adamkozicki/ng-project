@@ -17,7 +17,6 @@ import { PanelBaseComponent } from './panel-base.component'
   styles: []
 })
 export class PanelDateComponent extends PanelBaseComponent implements OnInit {
-
-  
+ 
 
 }

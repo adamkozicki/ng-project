@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
 import {PanelBaseComponent} from './panel-base.component'
 import {PanelDateComponent} from './panel-date.component'
 import {PanelInventComponent} from './panel-invent.component'
@@ -19,11 +19,26 @@ import {PanelCloseComponent} from './panel-close.component'
   `,
   styles: []
 })
-export class PanelComponent extends PanelBaseComponent implements OnInit {
+export class PanelComponent extends PanelBaseComponent implements OnInit, AfterContentInit {
+
+  @ContentChildren(PanelDateComponent)
+  panels = new QueryList<PanelDateComponent>()
 
 
   ngAfterContentInit() {
+    setTimeout(()=>{
+      if(this.panels.length){
+        this.openTab(this.panels.first)
+      }
+    })
     super.ngAfterContentInit()
+  }
+
+  openTab(panel){
+    this.panels.toArray().forEach(panel=>{
+      panel.open = false
+    })
+    panel.open = true
   }
 
 }

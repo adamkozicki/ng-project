@@ -10,6 +10,7 @@ import { PanelBaseComponent } from './../ui/panel/panel-base.component';
 import { PanelInventComponent } from './../ui/panel/panel-invent.component';
 import { PanelComponent } from './../ui/panel/panel.component';
 import { PanelDateComponent } from './../ui/panel/panel-date.component';
+import { PanelInvCloseComponent } from './../ui/panel-inv-close/panel-inv-close.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { PanelDateComponent } from './../ui/panel/panel-date.component';
     PanelBaseComponent,
     PanelInventComponent,
     PanelComponent,
-    PanelDateComponent
+    PanelDateComponent,
+    PanelInvCloseComponent
     ],
   exports: [
     InventoryMainComponent
