@@ -21,24 +21,24 @@ import {PanelCloseComponent} from './panel-close.component'
 })
 export class PanelComponent extends PanelBaseComponent implements OnInit, AfterContentInit {
 
-  @ContentChildren(PanelDateComponent)
-  panels = new QueryList<PanelDateComponent>()
+  // @ContentChildren(PanelDateComponent)
+  // panels = new QueryList<PanelDateComponent>()
 
 
-  ngAfterContentInit() {
-    setTimeout(()=>{
-      if(this.panels.length){
-        this.openTab(this.panels.first)
-      }
-    })
-    super.ngAfterContentInit()
-  }
+  // ngAfterContentInit() {
+  //   setTimeout(()=>{
+  //     if(this.panels.length){
+  //       this.openTab(this.panels.first)
+  //     }
+  //   })
+  //   super.ngAfterContentInit()
+  // }
 
-  openTab(panel){
-    this.panels.toArray().forEach(panel=>{
-      panel.open = false
-    })
-    panel.open = true
-  }
+  // openTab(panel){
+  //   this.panels.toArray().forEach(panel=>{
+  //     panel.open = false
+  //   })
+  //   panel.open = true
+  // }
 
 }

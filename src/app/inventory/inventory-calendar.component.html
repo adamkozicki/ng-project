@@ -1,49 +1,27 @@
+<app-inventory-date-range [dayBack] = "dayBack" [dayFront] = "dayFront"></app-inventory-date-range>
+<br>
 <div class="row">
-  <app-panel class="card-deck col-lg-3">
+  <app-panel class="card-deck col-lg-4">
     <div class="card">
-      <h4 ngProjectAs="panel-header">      
-          <app-panel-inv-close></app-panel-inv-close> 
-          Adam Kozicki
-      </h4>
-
-      <br>
-
-      <app-panel-date *ngFor="let date of dates">
-        <h6 class="card-header">{{date}} <app-panel-inv-close></app-panel-inv-close></h6>
-        
-        <app-panel-invent *ngFor="let invent of invents">
-          {{invent}} <app-panel-inv-close></app-panel-inv-close>
-        </app-panel-invent>
-        <div class="card-footer">
-          <input (keyup.enter)="
-        invents.push(itemNameRef.value);
-        itemNameRef.value = ''
-      " #itemNameRef class="form-control">
-        </div>
-      </app-panel-date>
-
-    </div>
-  </app-panel>
-
-  <!--<app-panel class="card-deck col-lg-3">
-    <div class="card">
-      <h4 ngProjectAs="panel-header">      
-          <app-panel-inv-close></app-panel-inv-close> 
-          Piotr Bińkowski
-      </h4>
-
-      <br>
-
-      <app-panel-date *ngFor="let date of dates">
-        <h6 class="card-header">{{date}}</h6>
+      <h4 ngProjectAs="panel-header">
         <app-panel-inv-close></app-panel-inv-close>
-        <app-panel-invent *ngFor="let invent of invents">
+        {{persons[0]}}
+      </h4>
+
+      <br>
+
+      <app-panel-date *ngFor="let date of dates">
+        <h6 class="card-header">{{date}}
           <app-panel-inv-close></app-panel-inv-close>
+        </h6>
+
+        <app-panel-invent *ngFor="let invent of inventsA">
           {{invent}}
+          <app-panel-inv-close></app-panel-inv-close>
         </app-panel-invent>
         <div class="card-footer">
           <input (keyup.enter)="
-        invents.push(itemNameRef.value);
+        inventsA.push(itemNameRef.value);
         itemNameRef.value = ''
       " #itemNameRef class="form-control">
         </div>
@@ -52,29 +30,61 @@
     </div>
   </app-panel>
 
-  <app-panel class="card-deck col-lg-3">
+  <app-panel class="card-deck col-lg-4">
     <div class="card">
-      <h4 ngProjectAs="panel-header">      
-          <app-panel-inv-close></app-panel-inv-close> 
-          Marta Raczyńska
+      <h4 ngProjectAs="panel-header">
+        <app-panel-inv-close></app-panel-inv-close>
+        {{persons[1]}}
       </h4>
 
       <br>
 
       <app-panel-date *ngFor="let date of dates">
-        <h6 class="card-header">{{date}}</h6>
-        <app-panel-inv-close></app-panel-inv-close>
-        <app-panel-invent *ngFor="let invent of invents">
+        <h6 class="card-header">{{date}}
+          <app-panel-inv-close></app-panel-inv-close>
+        </h6>
+
+        <app-panel-invent *ngFor="let invent of inventsP">
           {{invent}}
+          <app-panel-inv-close></app-panel-inv-close>
         </app-panel-invent>
         <div class="card-footer">
           <input (keyup.enter)="
-        invents.push(itemNameRef.value);
+        inventsA.push(itemNameRef.value);
         itemNameRef.value = ''
       " #itemNameRef class="form-control">
         </div>
       </app-panel-date>
 
     </div>
-  </app-panel>-->
+  </app-panel>
+
+  <app-panel class="card-deck col-lg-4">
+    <div class="card">
+      <h4 ngProjectAs="panel-header">
+        <app-panel-inv-close></app-panel-inv-close>
+        {{persons[2]}}
+      </h4>
+
+      <br>
+
+      <app-panel-date *ngFor="let date of dates">
+        <h6 class="card-header">{{date}}
+          <app-panel-inv-close></app-panel-inv-close>
+        </h6>
+
+        <app-panel-invent *ngFor="let invent of inventsM">
+          {{invent}}
+          <app-panel-inv-close></app-panel-inv-close>
+        </app-panel-invent>
+        <div class="card-footer">
+          <input (keyup.enter)="
+        inventsA.push(itemNameRef.value);
+        itemNameRef.value = ''
+      " #itemNameRef class="form-control">
+        </div>
+      </app-panel-date>
+
+    </div>
+  </app-panel>
 </div>

@@ -90,5 +90,44 @@
       "registerDate": "2018-03-08",
       "profileImg": "assets/avatars/on.jpg"
     }
+  ],
+
+  "invents": [
+    {
+      "id": "1",
+      "PSD": "39613",
+      "NPSD": "Johnny Rockets",
+      "date": "2018-01-01",
+      "person": "Piotr Bińkowski",
+      "type": "całościowa",
+      "status": "wykonana"
+    },
+    {
+      "id": "2",
+      "PSD": "39620",
+      "NPSD": "Furrore Okęcie",
+      "date": "2018-06-01",
+      "person": "Adam Kozicki",
+      "type": "zdawcza",
+      "status": "oczekuje"
+    },
+    {
+      "id": "3",
+      "PSD": "39619",
+      "NPSD": "Furrore Okęcie",
+      "date": "2018-05-01",
+      "person": "Marta Raczyńska",
+      "type": "zdawcza",
+      "status": "oczekuje"
+    },
+    {
+      "id": "4",
+      "PSD": "39620",
+      "NPSD": "Furrore Okęcie",
+      "date": "2018-06-01",
+      "person": "Adam Kozicki",
+      "type": "zdawcza",
+      "status": "oczekuje"
+    }
   ]
 }

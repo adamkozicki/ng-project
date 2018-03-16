@@ -4,7 +4,7 @@ import { PanelBaseComponent } from './panel-base.component'
 @Component({
   selector: 'app-panel-date',
   template: `
-  <div class="card">
+  <div class="card" *ngIf="open">
       <ng-content select=".card-header"></ng-content>
       
       <div class="card-body">    
