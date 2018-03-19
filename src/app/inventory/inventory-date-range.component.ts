@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder,ReactiveFormsModule  } from '@angular/forms';
+import { Subject, Observable } from 'rxjs';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-inventory-date-range',
@@ -14,23 +16,39 @@ import { FormControl, FormGroup, FormBuilder,ReactiveFormsModule  } from '@angul
   styles: []
 })
 export class InventoryDateRangeComponent implements OnInit {
-
+  
   @Input()
-  dayBack
+  dates
 
-  @Input()
-  dayFront
+  dayBack = 1
+  dayFront = 1
 
   @Output()
-  changeDateBack = new EventEmitter();
-  changeDateFront = new EventEmitter();
+  changeDates = new EventEmitter();
   
-  changeBack() {
-    this.changeDateBack.emit(this.dayBack)
+  changeDatesOut() {
+    this.dates = this.getDates()
+    this.changeDates.emit(this.dates)
   }
 
-  changeFront() {
-    this.changeDateFront.emit(this.dayFront)
+  getDates() {
+    let dates = [];
+
+    let prevDate = moment().subtract(this.dayBack, 'days').format('MM-DD-YYYY');
+    let nextDate = moment().add(this.dayFront, 'days').format('MM-DD-YYYY');
+
+    let start = new Date(prevDate);
+    let end = new Date(nextDate);
+
+    while (start < end) {
+      dates.push(moment(start).format('DD-MM-YY dddd'));
+      var newDate = start.setDate(start.getDate() + 1);
+      start = new Date(newDate);
+    }
+    this.dates = dates;
+    console.log(dates)
+    return this.dates
+    
   }
 
   dateForm: FormGroup
@@ -45,8 +63,8 @@ export class InventoryDateRangeComponent implements OnInit {
       .debounceTime(400)
       .subscribe(dayBack => {
         this.dayBack = dayBack
-        this.changeBack()
-        console.log(this.dayBack)
+        this.changeDatesOut()
+        console.log("dayback")
       })
 
     this.dateForm.get('dayFront').valueChanges
@@ -54,13 +72,12 @@ export class InventoryDateRangeComponent implements OnInit {
       .debounceTime(400)
       .subscribe(dayFront => {
         this.dayFront = dayFront
-        this.changeFront()
+        this.changeDatesOut()
+        console.log("dayfront")
       })
   }
 
   ngOnInit() {
-
-    console.log(this.dayBack)
   }
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit, ContentChild } from '@angular/core';
-import {Subject, Observable} from 'rxjs';
+import { Component, OnInit, ContentChild, AfterContentInit, Input } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
+import { InventoryDateRangeComponent } from './inventory-date-range.component';
 import * as moment from 'moment';
 
 @Component({
@@ -9,7 +10,6 @@ import * as moment from 'moment';
 })
 export class InventoryCalendarComponent implements OnInit {
 
-
   open = true
 
   persons = ['Adam Kozicki', 'Piotr Bińkowski', 'Marta Raczyńska', 'ISP'];
@@ -17,50 +17,27 @@ export class InventoryCalendarComponent implements OnInit {
   inventsP = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
   inventsM = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
 
+  dates
 
-  dayBack = 1
-  dayFront = 1
-  dayBack$ = new Subject(); 
-  dayFront$= new Subject();
+  @ContentChild(InventoryDateRangeComponent)
+  changeRange: InventoryDateRangeComponent
 
-  getDayBackStream() {
-    return this.dayBack$.startWith(this.dayBack$);
+  subscribeChangeRange() {
+    if (this.changeRange) {
+      this.changeRange.changeDates.subscribe((dates) => {
+        this.dates = dates;
+        console.log("data")
+        return this.dates
+      })
+    }
   }
-
-  getDayFrontStream() {
-    return this.dayFront$.startWith(this.dayFront$);
-  }
-
-  getDayBackSearchStream(){
-    return Observable
-          .from(this.dayBack$)
-          .startWith(this.dayBack)
-  }
-
-  getDayFrontSearchStream(){
-    return Observable
-          .from(this.dayFront$)
-          .startWith(this.dayFront)
-  }
-
-
-  dates = []; //Array where rest of the dates will be stored
-
-  prevDate = moment().subtract(this.dayBack, 'days').format('MM-DD-YYYY');;//15 days back date from today(This is the from date)
-
-  nextDate = moment().add(this.dayFront, 'days').format('MM-DD-YYYY');;//Date after 15 days from today (This is the end date)
-
-  //creating JS date objects
-  start = new Date(this.prevDate);
-  end = new Date(this.nextDate);
 
   ngOnInit() {
-    while (this.start < this.end) {
-      this.dates.push(moment(this.start).format('DD-MM-YY dddd'));
-      var newDate = this.start.setDate(this.start.getDate() + 1);
-      this.start = new Date(newDate);
-    }
-    console.log(this.dayBack);
+    this.subscribeChangeRange()
+  }
+
+  ngAfterContentInit() {
+    this.subscribeChangeRange() 
   }
 
   constructor() {
