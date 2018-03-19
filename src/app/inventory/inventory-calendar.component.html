@@ -1,4 +1,4 @@
-<app-inventory-date-range [dates]="dates"></app-inventory-date-range>
+<app-inventory-date-range (changeDates)="getData($event)" [dates]="dates"></app-inventory-date-range>
 <br>
 <div class="row">
   <app-panel class="card-deck col-lg-4">
@@ -23,7 +23,7 @@
           <input (keyup.enter)="
         inventsA.push(itemNameRef.value);
         itemNameRef.value = ''
-      " #itemNameRef class="form-control">
+      " #itemNameRef class="form-control form-control-sm" placeholder="Dodaj nową inwentaryzację">
         </div>
       </app-panel-date>
 

@@ -17,27 +17,14 @@ export class InventoryCalendarComponent implements OnInit {
   inventsP = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
   inventsM = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
 
-  dates
+  dates=[]
 
-  @ContentChild(InventoryDateRangeComponent)
-  changeRange: InventoryDateRangeComponent
-
-  subscribeChangeRange() {
-    if (this.changeRange) {
-      this.changeRange.changeDates.subscribe((dates) => {
-        this.dates = dates;
-        console.log("data")
-        return this.dates
-      })
-    }
+  getData(data){
+    this.dates = data;
   }
 
   ngOnInit() {
-    this.subscribeChangeRange()
-  }
 
-  ngAfterContentInit() {
-    this.subscribeChangeRange() 
   }
 
   constructor() {

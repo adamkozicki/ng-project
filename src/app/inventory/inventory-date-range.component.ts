@@ -18,10 +18,10 @@ import * as moment from 'moment';
 export class InventoryDateRangeComponent implements OnInit {
   
   @Input()
-  dates
+  dates = []
 
-  dayBack = 1
-  dayFront = 1
+  dayBack = 10
+  dayFront = 10
 
   @Output()
   changeDates = new EventEmitter();
@@ -46,7 +46,6 @@ export class InventoryDateRangeComponent implements OnInit {
       start = new Date(newDate);
     }
     this.dates = dates;
-    console.log(dates)
     return this.dates
     
   }
@@ -64,7 +63,6 @@ export class InventoryDateRangeComponent implements OnInit {
       .subscribe(dayBack => {
         this.dayBack = dayBack
         this.changeDatesOut()
-        console.log("dayback")
       })
 
     this.dateForm.get('dayFront').valueChanges
@@ -73,7 +71,6 @@ export class InventoryDateRangeComponent implements OnInit {
       .subscribe(dayFront => {
         this.dayFront = dayFront
         this.changeDatesOut()
-        console.log("dayfront")
       })
   }
 
