@@ -1,22 +1,96 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder,ReactiveFormsModule  } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Subject, Observable } from 'rxjs';
 import * as moment from 'moment';
 
 @Component({
   selector: 'app-inventory-date-range',
   template: `
-    <form [formGroup]="dateForm">
-      <div class="input-group">
-        <input type="text" formControlName="dayBack" class="form-control" [(ngModel)] = "dayBack" placeholder="Dni wstecz">
-        <input type="text" formControlName="dayFront" class="form-control" [(ngModel)] = "dayFront" placeholder="Dni w przód">
-      </div>
+    <form [formGroup]="dateForm" class="needs-validation">
+      <div class="form-row row">
+        <div class="col-md-2 mb-3">
+          <label for="dayBack">
+            <button type="button" class="btn btn-info btn-sm">
+            Dni wstecz <span class="badge badge-light">{{dayBack}}</span>
+          </button>
+          </label>
+          <div class="input-group">
+            <div class="slidecontainer">
+              <input type="range" class="form-control slider reverse" formControlName="dayBack" id="dayBack" min="0" max="100" [(ngModel)] = "dayBack">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <label for="dayFront">
+            <button type="button" class="btn btn-info btn-sm">
+            Dni wprzód <span class="badge badge-light">{{dayFront}}</span>
+          </button>
+          </label>
+          <div class="input-group">
+            <div class="slidecontainer">
+              <input type="range" class="form-control slider" formControlName="dayFront" id="dayFront" min="0" max="100" [(ngModel)] = "dayFront">
+            </div>
+          </div>
+        </div>
+      </div>  
     </form>
   `,
-  styles: []
+  styles:
+  [`
+    .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    }
+
+    /* The slider itself */
+    .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 100%; /* Full-width */
+        height: 15px; /* Specified height */
+        background: #fff2b2; /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+
+    .reverse {
+
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);}
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 15px; /* Set a specific slider handle width */
+        height: 15px; /* Slider handle height */
+        background: #5bc0de; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+        width: 15px; /* Set a specific slider handle width */
+        height: 15px; /* Slider handle height */
+        background: #5bc0de; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+    }
+
+  
+  `]
+
 })
 export class InventoryDateRangeComponent implements OnInit {
-  
+
   @Input()
   dates = []
 
@@ -25,7 +99,7 @@ export class InventoryDateRangeComponent implements OnInit {
 
   @Output()
   changeDates = new EventEmitter();
-  
+
   changeDatesOut() {
     this.dates = this.getDates()
     this.changeDates.emit(this.dates)
@@ -47,7 +121,7 @@ export class InventoryDateRangeComponent implements OnInit {
     }
     this.dates = dates;
     return this.dates
-    
+
   }
 
   dateForm: FormGroup
