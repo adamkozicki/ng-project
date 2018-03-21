@@ -92,7 +92,7 @@
     }
   ],
 
-  "invents": [
+  "inventories": [
     {
       "id": "1",
       "PSD": "39613",
@@ -128,6 +128,44 @@
       "person": "Adam Kozicki",
       "type": "zdawcza",
       "status": "oczekuje"
+    }
+  ],
+  "inventories": [
+    {
+      "id": "1",
+      "PSD": "39613",
+      "NPSD": "JohnyRockets",
+      "date": "2018-03-21",
+      "type": "zdawcza",
+      "status": "zaplanowana",
+      "user": "Adam Kozicki"
+    },
+    {
+      "id": "2",
+      "PSD": "39620",
+      "NPSD": "Furrore",
+      "date": "2018-03-20",
+      "type": "całościowa",
+      "status": "zaplanowana",
+      "user": "Adam Kozicki"
+    },
+        {
+      "id": "3",
+      "PSD": "39613",
+      "NPSD": "JohnyRockets",
+      "date": "2018-03-18",
+      "type": "zdawcza",
+      "status": "zaplanowana",
+      "user": "Marta Raczyńska"
+    },
+    {
+      "id": "4",
+      "PSD": "39620",
+      "NPSD": "Furrore",
+      "date": "2018-02-28",
+      "type": "całościowa",
+      "status": "wykonana",
+      "user": "Piotr Bińkowski"
     }
   ]
 }

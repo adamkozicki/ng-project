@@ -1,6 +1,9 @@
-<app-inventory-date-range (changeDates)="getData($event)" [dates]="dates"></app-inventory-date-range>
+<app-inventory-date-range (changeDates)="getData($event)" [inventories] = "inventories" (getInventoriesOut)="setInventories($event)" [dates]="dates"></app-inventory-date-range>
 <br>
 <div class="row">
+ <app-panel class="card-deck col-lg-4" *ngFor="let inventory of inventories">
+  {{inventory.id}}
+ </app-panel>
   <app-panel class="card-deck col-lg-4">
     <div class="card">
       <h4 ngProjectAs="panel-header">

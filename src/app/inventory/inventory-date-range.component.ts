@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Subject, Observable } from 'rxjs';
+import { InventoryService } from './inventory.service';
 import * as moment from 'moment';
 
 @Component({
@@ -94,11 +95,15 @@ export class InventoryDateRangeComponent implements OnInit {
   @Input()
   dates = []
 
+  @Input()
+  inventories = []
+
   dayBack = 10
   dayFront = 10
 
   @Output()
   changeDates = new EventEmitter();
+  getInventoriesOut = new EventEmitter();
 
   changeDatesOut() {
     this.dates = this.getDates()
@@ -126,7 +131,7 @@ export class InventoryDateRangeComponent implements OnInit {
 
   dateForm: FormGroup
 
-  constructor() {
+  constructor(private inventoriesService: InventoryService) {
     this.dateForm = new FormGroup({
       'dayBack': new FormControl(''),
       'dayFront': new FormControl('')
@@ -148,7 +153,13 @@ export class InventoryDateRangeComponent implements OnInit {
       })
   }
 
+
+
   ngOnInit() {
+    this.inventoriesService.getInventoriesStream().subscribe(inventories => this.inventories = inventories)
+    console.log(this.inventories)
+    this.getInventoriesOut.emit(this.inventories)
+
   }
 
 }

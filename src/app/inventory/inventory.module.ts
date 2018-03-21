@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
+import { InventoryService } from './inventory.service'
+
 import { routerModule } from './inventory.routing';
 import { InventoryMainComponent } from './inventory-main.component';
 import { InventoryPsdComponent } from './inventory-psd.component';
@@ -20,6 +22,9 @@ import { InventoryDateRangeComponent } from './inventory-date-range.component';
     routerModule,
     ReactiveFormsModule,
     FormsModule
+  ],
+  providers: [
+    { provide: InventoryService, useClass: InventoryService },
   ],
   declarations: [
     InventoryMainComponent, 

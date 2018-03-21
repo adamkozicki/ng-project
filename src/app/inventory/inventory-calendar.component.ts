@@ -18,9 +18,14 @@ export class InventoryCalendarComponent implements OnInit {
   inventsM = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
 
   dates=[]
+  inventories = []
 
   getData(data){
     this.dates = data;
+  }
+
+  getInventoriesOut(data){
+    this.inventories = data;
   }
 
   ngOnInit() {
