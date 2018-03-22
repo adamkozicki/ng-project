@@ -13,12 +13,11 @@ export class InventoryCalendarComponent implements OnInit {
   open = true
 
   persons = ['Adam Kozicki', 'Piotr Bińkowski', 'Marta Raczyńska', 'ISP'];
-  inventsA = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
-  inventsP = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
-  inventsM = ['39613 - Johnny Rockets', '39620 - Furrore Okęcie'];
 
-  dates=[]
-  inventories = []
+  dates
+  inventories
+
+  inventories2 = []
 
   getData(data){
     this.dates = data;
@@ -28,8 +27,25 @@ export class InventoryCalendarComponent implements OnInit {
     this.inventories = data;
   }
 
+  getInventoriesOut2(data){
+    this.inventories2 = data;
+
+    for(let i=0; i<this.inventories2.length; i++) {
+      for(let j=0; j<this.dates.length; j++) {
+        if(this.inventories2[i].date == this.dates[j].date){
+          this.dates[j].invents.push(this.inventories2[i])
+        }
+      }
+    }
+  }
+
+
   ngOnInit() {
 
+  }
+
+  AfterContentInit() {
+    
   }
 
   constructor() {

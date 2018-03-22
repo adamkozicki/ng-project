@@ -24,6 +24,7 @@ export class InventoryService {
 
   inventories = []
   inventory = []
+  inventories2 = []
 
   inventoriesStream$ = new Subject<Inventory[]>();
 
@@ -50,6 +51,11 @@ export class InventoryService {
                 this.inventories = inventories;
                 this.inventoriesStream$.next(this.inventories)
               })
+  }
+
+  getInventories2(){
+    return this.http.get(this.server_url).map( response => response.json())
+
   }
 
   getInventory(id){
@@ -122,5 +128,7 @@ export class InventoryService {
     .subscribe( inventories => {
       this.inventoriesStream$.next(this.inventories)
     })
+
+    return this.inventoriesStream$.startWith (this.inventories)
   }
 }

@@ -36,58 +36,7 @@ import * as moment from 'moment';
       </div>  
     </form>
   `,
-  styles:
-  [`
-    .slidecontainer {
-    width: 100%; /* Width of the outside container */
-    }
-
-    /* The slider itself */
-    .slider {
-        -webkit-appearance: none;  /* Override default CSS styles */
-        appearance: none;
-        width: 100%; /* Full-width */
-        height: 15px; /* Specified height */
-        background: #fff2b2; /* Grey background */
-        outline: none; /* Remove outline */
-        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-        transition: opacity .2s;
-    }
-
-    /* Mouse-over effects */
-    .slider:hover {
-        opacity: 1; /* Fully shown on mouse-over */
-    }
-
-    .reverse {
-
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg);}
-    }
-
-    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
-        appearance: none;
-        width: 15px; /* Set a specific slider handle width */
-        height: 15px; /* Slider handle height */
-        background: #5bc0de; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-    }
-
-    .slider::-moz-range-thumb {
-        width: 15px; /* Set a specific slider handle width */
-        height: 15px; /* Slider handle height */
-        background: #5bc0de; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-    }
-
-  
-  `]
+  styleUrls: ['./inventory-date-range.component.css']
 
 })
 export class InventoryDateRangeComponent implements OnInit {
@@ -96,14 +45,23 @@ export class InventoryDateRangeComponent implements OnInit {
   dates = []
 
   @Input()
-  inventories = []
+  inventories
+
+  @Input()
+  inventories2 = []
+
 
   dayBack = 10
   dayFront = 10
 
   @Output()
   changeDates = new EventEmitter();
+
+  @Output()
   getInventoriesOut = new EventEmitter();
+
+  @Output()
+  getInventoriesOut2 = new EventEmitter();
 
   changeDatesOut() {
     this.dates = this.getDates()
@@ -120,7 +78,10 @@ export class InventoryDateRangeComponent implements OnInit {
     let end = new Date(nextDate);
 
     while (start < end) {
-      dates.push(moment(start).format('DD-MM-YY dddd'));
+      dates.push({
+        "date": moment(start).format('DD-MM-YY dddd'),
+        "invents": []
+      });
       var newDate = start.setDate(start.getDate() + 1);
       start = new Date(newDate);
     }
@@ -129,6 +90,7 @@ export class InventoryDateRangeComponent implements OnInit {
 
   }
 
+
   dateForm: FormGroup
 
   constructor(private inventoriesService: InventoryService) {
@@ -136,12 +98,29 @@ export class InventoryDateRangeComponent implements OnInit {
       'dayBack': new FormControl(''),
       'dayFront': new FormControl('')
     })
+  }
+
+
+
+  ngOnInit() {
+
+    this.inventoriesService.getInventories2()
+    .subscribe(inventories => {
+      for(let i = inventories.length-1; i>=0; i--){
+        this.inventories2.push(inventories[i])
+        this.inventories2.reverse()
+      }
+    })
+
     this.dateForm.get('dayBack').valueChanges
       .distinctUntilChanged()
       .debounceTime(400)
       .subscribe(dayBack => {
         this.dayBack = dayBack
         this.changeDatesOut()
+        this.inventories = this.inventoriesService.getInventoriesStream()
+        this.getInventoriesOut.emit(this.inventories)
+        this.getInventoriesOut2.emit(this.inventories2)
       })
 
     this.dateForm.get('dayFront').valueChanges
@@ -150,16 +129,12 @@ export class InventoryDateRangeComponent implements OnInit {
       .subscribe(dayFront => {
         this.dayFront = dayFront
         this.changeDatesOut()
+        this.inventories = this.inventoriesService.getInventoriesStream()
+        this.getInventoriesOut.emit(this.inventories)
+        this.getInventoriesOut2.emit(this.inventories2)
       })
-  }
-
-
-
-  ngOnInit() {
-    this.inventoriesService.getInventoriesStream().subscribe(inventories => this.inventories = inventories)
-    console.log(this.inventories)
-    this.getInventoriesOut.emit(this.inventories)
 
   }
+  
 
 }

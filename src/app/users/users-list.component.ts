@@ -20,5 +20,6 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
     this.users = this.usersService.getUsersStream()
+    console.log(this.users)
   }
 }

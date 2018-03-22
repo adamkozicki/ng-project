@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "name": "Adama",
+      "name": "Adam",
       "surname": "Kozicki",
       "mail": "adamkozicki@op.pl",
       "pass": "123",
@@ -91,51 +91,12 @@
       "profileImg": "assets/avatars/on.jpg"
     }
   ],
-
-  "inventories": [
-    {
-      "id": "1",
-      "PSD": "39613",
-      "NPSD": "Johnny Rockets",
-      "date": "2018-01-01",
-      "person": "Piotr Bińkowski",
-      "type": "całościowa",
-      "status": "wykonana"
-    },
-    {
-      "id": "2",
-      "PSD": "39620",
-      "NPSD": "Furrore Okęcie",
-      "date": "2018-06-01",
-      "person": "Adam Kozicki",
-      "type": "zdawcza",
-      "status": "oczekuje"
-    },
-    {
-      "id": "3",
-      "PSD": "39619",
-      "NPSD": "Furrore Okęcie",
-      "date": "2018-05-01",
-      "person": "Marta Raczyńska",
-      "type": "zdawcza",
-      "status": "oczekuje"
-    },
-    {
-      "id": "4",
-      "PSD": "39620",
-      "NPSD": "Furrore Okęcie",
-      "date": "2018-06-01",
-      "person": "Adam Kozicki",
-      "type": "zdawcza",
-      "status": "oczekuje"
-    }
-  ],
   "inventories": [
     {
       "id": "1",
       "PSD": "39613",
       "NPSD": "JohnyRockets",
-      "date": "2018-03-21",
+      "date": "12-03-18 poniedziałek",
       "type": "zdawcza",
       "status": "zaplanowana",
       "user": "Adam Kozicki"
@@ -149,11 +110,11 @@
       "status": "zaplanowana",
       "user": "Adam Kozicki"
     },
-        {
+    {
       "id": "3",
       "PSD": "39613",
       "NPSD": "JohnyRockets",
-      "date": "2018-03-18",
+      "date": "12-03-18 poniedziałek",
       "type": "zdawcza",
       "status": "zaplanowana",
       "user": "Marta Raczyńska"
@@ -162,7 +123,7 @@
       "id": "4",
       "PSD": "39620",
       "NPSD": "Furrore",
-      "date": "2018-02-28",
+      "date": "13-03-18 wtorek",
       "type": "całościowa",
       "status": "wykonana",
       "user": "Piotr Bińkowski"
