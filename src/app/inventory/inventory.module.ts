@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { InventoryService } from './inventory.service'
 
@@ -15,13 +16,15 @@ import { PanelComponent } from './../ui/panel/panel.component';
 import { PanelDateComponent } from './../ui/panel/panel-date.component';
 import { PanelInvCloseComponent } from './../ui/panel-inv-close/panel-inv-close.component';
 import { InventoryDateRangeComponent } from './inventory-date-range.component';
+import { DialogComponent } from './dialog.component';
 
 @NgModule({
   imports: [
     CommonModule,
     routerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: InventoryService, useClass: InventoryService },
@@ -35,7 +38,8 @@ import { InventoryDateRangeComponent } from './inventory-date-range.component';
     PanelComponent,
     PanelDateComponent,
     PanelInvCloseComponent,
-    InventoryDateRangeComponent
+    InventoryDateRangeComponent,
+    DialogComponent
     ],
   exports: [
     InventoryMainComponent

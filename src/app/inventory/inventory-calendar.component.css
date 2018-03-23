@@ -1,9 +1,54 @@
 
+    .card {
+      margin-bottom: 5px !important;
+    }
+    
     .card-header{
-      background: #fff2b2 !important;
+      font-size: 0.9rem;
+      background: #fff2b2;
+      padding: 0.4em 0.1rem 0rem 1rem;
     }
 
-    .zdawcza {
+    h6.card-header span{
+      font-size: 1rem;
+      float: right;
+      margin-right: 10px;
+      padding: 0.1rem 0.1rem 0.6rem 0.1rem;
+    }
+
+    .card-footer {
+      padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+    }
+
+    .card-header.sobota{
+      background: #76ea73 !important;
+      color: #fff;
+    }
+    .card-header.niedziela{
+      background: #76ea73 !important;
+      color: #fff;
+    }
+
+    table td {
+      font-size: 0.9rem;
+    }
+
+    table tr td {
+      text-align: center;
+      font-weight: 600
+    }
+
+    .zdawcza{
       color: #ffffff;
-      background: #ff3e3e;
+      background: #ff8282;
+    }
+
+    .zaplanowana {
+      color: #000000;
+      background: #59ffff;
+    }
+
+    .wykonana {
+      color: #ffffff;
+      background: #78f000;
     }

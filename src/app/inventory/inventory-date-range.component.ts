@@ -80,7 +80,9 @@ export class InventoryDateRangeComponent implements OnInit {
     while (start < end) {
       dates.push({
         "date": moment(start).format('DD-MM-YY dddd'),
-        "invents": []
+        "invents": [],
+        "day": moment(start).format('dddd'),
+        "month": moment(start).format('MMMM'),
       });
       var newDate = start.setDate(start.getDate() + 1);
       start = new Date(newDate);

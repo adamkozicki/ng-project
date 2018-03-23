@@ -12,12 +12,30 @@ export class InventoryCalendarComponent implements OnInit {
 
   open = true
 
+  showDialog = false
+
   persons = ['Adam Kozicki', 'Piotr Bińkowski', 'Marta Raczyńska', 'ISP'];
 
   dates
   inventories
 
+  addDate = [];
+
+  editInvent = [];
+
   inventories2 = []
+
+  OpenDialog(data) {
+    this.showDialog = true;
+    if(data.status) {
+      this.addDate = []
+      this.editInvent.push(data);
+    }else{
+      this.editInvent = [];
+      this.addDate.push(data.date);
+    }
+    
+  }
 
   getData(data){
     this.dates = data;
