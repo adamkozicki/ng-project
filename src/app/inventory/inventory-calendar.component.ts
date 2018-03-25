@@ -28,10 +28,13 @@ export class InventoryCalendarComponent implements OnInit {
   OpenDialog(data) {
     this.showDialog = true;
     if(data.status) {
-      this.addDate = []
+      console.log(data.status)
+      this.addDate = [];
+      this.editInvent = [];
       this.editInvent.push(data);
     }else{
       this.editInvent = [];
+      this.addDate = [];
       this.addDate.push(data.date);
     }
     

@@ -28,8 +28,8 @@ export class UserFormComponent implements OnInit {
       })
     }
 
-  return(id){
-    this.router.navigate(['users',id]);
+  return(user){
+    this.router.navigate(['users',user.id]);
   }
 
   constructor(private activeRoute: ActivatedRoute,

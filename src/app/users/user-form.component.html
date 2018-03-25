@@ -1,5 +1,5 @@
 <div *ngIf="user">
-  <form #formRef="ngForm" novalidate="true" (ngSubmit)="save(formRef.valid, user)">
+  <form #formRef="ngForm" novalidate="true">
   <div class="row">
     <div class="form-group col-md-6">
       <label>Imię:</label>
@@ -149,8 +149,8 @@
     </div>
   </div>
   <div class="form-group">
-    <button class="btn btn-danger float-xs-right" type="submit">Zapisz</button>
-    <button class="btn btn-success float-xs-right" (click)="return(user_id)">Wróć</button>
+    <button class="btn btn-danger float-xs-right" (click)="save(formRef.valid, user)" type="submit">Zapisz</button>
+    <button class="btn btn-success float-xs-right" (click)="return(user)">Wróć</button>
   </div>
   </form>
 </div>

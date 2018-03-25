@@ -1,8 +1,8 @@
 <app-inventory-date-range (changeDates)="getData($event)" (getInventoriesOut)="getInventoriesOut($event)" [inventories]="inventories" (getInventoriesOut2)="getInventoriesOut2($event)" [inventories2]="inventories2" [dates]="dates"></app-inventory-date-range>
 <br>
 
-<app-dialog [addDate]="addDate.length" [editInvent]="editInvent" [(visible)]="showDialog">
-    <div *ngIf="addDate">
+<app-dialog [addDate]="addDate" [editInvent]="editInvent" [(visible)]="showDialog">
+    <div *ngIf="addDate.length">
       <h6>Dodawanie inwentaryzacji w dniu {{addDate}}</h6>
       <button (click)="showDialog = !showDialog" class="btn">Zamknij</button>
     </div>
@@ -33,8 +33,7 @@
         <app-panel-invent>
           <table class="table table-sm">
             <tbody>
-              <tr class="{{invents.type}}" *ngFor="let invents of date.invents; let i = index" (click)="OpenDialog(invents)">
-                <th scope="row">{{index}}</th>
+              <tr class="{{invents.type}}" *ngFor="let invents of date.invents;" (click)="OpenDialog(invents)">
                 <td>{{invents.PSD}}</td>
                 <td>{{invents.NPSD}}</td>
                 <td class="{{invents.status}}">{{invents.status}}</td>

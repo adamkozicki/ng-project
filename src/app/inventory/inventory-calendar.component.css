@@ -29,6 +29,10 @@
       color: #fff;
     }
 
+    table tr {
+      cursor: pointer;
+    }
+
     table td {
       font-size: 0.9rem;
     }
