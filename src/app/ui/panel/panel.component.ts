@@ -17,7 +17,15 @@ import {PanelCloseComponent} from './panel-close.component'
       <ng-content select=".card-footer"></ng-content>
     </div>
   `,
-  styles: []
+  styles: [`
+  .card,
+  .card-body {
+      margin-left: 1px !important;
+      margin-right: 1px !important;
+      margin-top: 1px !important;
+      padding: 1px;
+    }
+  `]
 })
 export class PanelComponent extends PanelBaseComponent implements OnInit, AfterContentInit {
 

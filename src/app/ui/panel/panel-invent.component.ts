@@ -10,7 +10,15 @@ import { PanelBaseComponent } from './panel-base.component'
       </div>
   </div>
   `,
-  styles: []
+  styles: [`
+  .card,
+  .card-body {
+      margin-left: 1px !important;
+      margin-right: 1px !important;
+      margin-top: 1px !important;
+      padding: 1px;
+    }
+  `]
 })
 export class PanelInventComponent extends PanelBaseComponent implements OnInit {
 

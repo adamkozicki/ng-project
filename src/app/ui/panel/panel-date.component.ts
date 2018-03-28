@@ -14,7 +14,21 @@ import { PanelBaseComponent } from './panel-base.component'
       <ng-content select=".card-footer"></ng-content>
   </div>
   `,
-  styles: []
+  styles: 
+  [`
+
+  .card {
+    border: 1px solid #17a2b8;
+    margin-bottom: 15px !important;
+  }
+    .card,
+  .card-body {
+      margin-left: 1px !important;
+      margin-right: 1px !important;
+      margin-top: 1px !important;
+      padding: 1px;
+    }
+  `]
 })
 export class PanelDateComponent extends PanelBaseComponent implements OnInit {
  

@@ -8,7 +8,18 @@ import { PanelInvCloseComponent } from './../panel-inv-close/panel-inv-close.com
       panel-base works!
     </p>
   `,
-  styles: []
+  styles: [`
+
+  .card,
+  .card-body {
+      margin-left: 1px !important;
+      margin-right: 1px !important;
+      margin-top: 1px !important;
+      padding: 1px;
+    }`
+    
+    
+  ]
 })
 export class PanelBaseComponent implements OnInit {
 

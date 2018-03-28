@@ -4,20 +4,20 @@
 <app-dialog [addDate]="addDate" [editInvent]="editInvent" [(visible)]="showDialog">
     <div *ngIf="addDate.length">
       <h6>Dodawanie inwentaryzacji w dniu {{addDate}}</h6>
-      <button (click)="showDialog = !showDialog" class="btn">Zamknij</button>
+      <app-inventory-form [addDate]="addDate"></app-inventory-form>
     </div>
 
     <div *ngIf="editInvent.length">
       <div *ngFor="let invent of editInvent">
       <h6>Edycja inwentaryzacji o id: {{invent.id}}</h6>
         <p>{{invent.PSD}}</p>
+        <app-inventory-form [invent]="invent"></app-inventory-form>
       </div>
-      <button (click)="showDialog = !showDialog" class="btn">Zamknij</button>
     </div>
 </app-dialog>
 
 <div class="row">
-  <app-panel class="card-deck col-lg-4">
+  <app-panel class="col-lg-4">
     <div class="card">
       <h4 ngProjectAs="panel-header">
         <app-panel-inv-close></app-panel-inv-close>
@@ -44,7 +44,8 @@
 
 
         <div class="card-footer">
-          <button type="button" class="btn btn-info btn-sm" (click)="OpenDialog(date)">Dodaj</button>
+            <button type="button" class="btn btn-light btn-sm btn-block" (click)="OpenDialog(date)">Dodaj</button>
+          <!--<a class="botton-footer" (click)="OpenDialog(date)">Dodaj</a>-->
         </div>
       </app-panel-date>
 

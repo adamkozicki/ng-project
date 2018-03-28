@@ -9,6 +9,7 @@ import { routerModule } from './inventory.routing';
 import { InventoryMainComponent } from './inventory-main.component';
 import { InventoryPsdComponent } from './inventory-psd.component';
 import { InventoryCalendarComponent } from './inventory-calendar.component';
+import { InventoryFormComponent } from './inventory-form.component';
 
 import { PanelBaseComponent } from './../ui/panel/panel-base.component';
 import { PanelInventComponent } from './../ui/panel/panel-invent.component';
@@ -33,6 +34,7 @@ import { DialogComponent } from './dialog.component';
     InventoryMainComponent, 
     InventoryPsdComponent, 
     InventoryCalendarComponent,
+    InventoryFormComponent,
     PanelBaseComponent,
     PanelInventComponent,
     PanelComponent,
