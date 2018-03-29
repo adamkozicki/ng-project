@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { InventoryService } from './inventory.service'
 
 @Component({
   selector: 'app-inventory-form',
@@ -8,9 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
     <div class="row">
       <div class="form-group col-md-12">
         <label>PSD</label>
-        <select #nameRef="ngModel" required [(ngModel)]="invent.PSD" name="PSD" class="form-control form-control-sm">
+        <select #nameRef="ngModel" required [ngModel]="invent.PSD" name="PSD" class="form-control form-control-sm">
           <option selected="selected" value="{{invent.PSD}}" disabled hidden>{{invent.PSD}}{{" - " + invent.NPSD}}</option>
-          <option></option>
+          <option *ngFor="let location of locations" value="{{location.PSD}}">{{location.PSD}}{{" - " + location.NPSD}}</option>
         </select>
         <div class="has-danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
           <div class="form-control-feedback" 
@@ -37,14 +38,29 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InventoryFormComponent implements OnInit {
 
   @Input()
-  invent = []
+  invent
 
   @Input()
   addDate = []
 
-  constructor() { }
+  locations = []
+
+  constructor(private inventoryService: InventoryService) { }
 
   ngOnInit() {
+
+    this.inventoryService.getLocations()
+    .subscribe(locations => {
+      for(let i = locations.length-1; i>=0; i--){
+        this.locations.push(locations[i])
+        this.locations.reverse()
+      }
+    })
+
+    if(this.invent.id) {
+      console.log(this.invent.id)
+    }
+    
   }
 
 }

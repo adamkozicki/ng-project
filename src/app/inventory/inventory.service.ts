@@ -19,6 +19,7 @@ export interface Inventory{
 export class InventoryService {
 
   server_url = 'http://localhost:3000/inventories/';
+  server_url_locations = 'http://localhost:3000/locations/';
 
   constructor(private http:Http) { }
 
@@ -130,5 +131,10 @@ export class InventoryService {
     })
 
     return this.inventoriesStream$.startWith (this.inventories)
+  }
+
+  getLocations(){
+    return this.http.get(this.server_url_locations).map( response => response.json())
+
   }
 }

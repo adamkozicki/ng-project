@@ -155,5 +155,596 @@
       "status": "zaplanowana",
       "user": "Adam Kozicki"
     }
+  ],
+  "locations": 
+  [
+    {
+      "PSD": "19105",
+      "NPSD": "Wrocław C.H. Renoma lok K101",
+      "ADDRESS": "ul. Świdnicka 40",
+      "BRAND": "50-950 Wrocław"
+    },
+    {
+      "PSD": "19106",
+      "NPSD": "Wrocław Fashion Outlet ul.Graniczna",
+      "ADDRESS": "ul. Graniczna 2a",
+      "BRAND": "54-610 Wrocław"
+    },
+    {
+      "PSD": "19107",
+      "NPSD": "Legnica C.H. Galeria Piastów",
+      "ADDRESS": "ul. NMP 9",
+      "BRAND": "59-220 Legnica"
+    },
+    {
+      "PSD": "19108",
+      "NPSD": "Bielany Wrocławskie C.H. Auchan ul. Francuska",
+      "ADDRESS": "ul. Francuska 6 Bielany Wrocławskie",
+      "BRAND": "55-040 Kobierzyce"
+    },
+    {
+      "PSD": "19110",
+      "NPSD": "Wrocław C.H. Fashion Outlet ul.Graniczna",
+      "ADDRESS": "Graniczna 1",
+      "BRAND": "54-610 Wrocław"
+    },
+    {
+      "PSD": "19202",
+      "NPSD": "Wrocław Ul. Świdnicka",
+      "ADDRESS": "Świdnicka 1",
+      "BRAND": "50-064 Wrocław"
+    },
+    {
+      "PSD": "19602",
+      "NPSD": "Wrocław Lotnisko Strachowice Flying Bistro",
+      "ADDRESS": "Graniczna 190",
+      "BRAND": "54-530 Wrocław"
+    },
+    {
+      "PSD": "29101",
+      "NPSD": "Grudziądz C.H. Carrefour",
+      "ADDRESS": "ul. Konarskiego 45",
+      "BRAND": "86-300 Grudziądz"
+    },
+    {
+      "PSD": "29103",
+      "NPSD": "Łódź C.H. Port Łodź IKEA",
+      "ADDRESS": "ul.Pabianicka 255",
+      "BRAND": "93-457 Łódź"
+    },
+    {
+      "PSD": "29105",
+      "NPSD": "Rzgów Ptak Outlet Furore!",
+      "ADDRESS": "ul. Żeromskiego 8",
+      "BRAND": "95-030 Rzgów k. Łodzi"
+    },
+    {
+      "PSD": "29107",
+      "NPSD": "Furore! CH Zielone Arkady Bydgoszcz",
+      "ADDRESS": "Wojska Polskiego 1",
+      "BRAND": "85-171 Bydgoszcz"
+    },
+    {
+      "PSD": "29602",
+      "NPSD": "Łódź Lotnisko Lublinek T3 lok nr U1.13 Flying Bistro",
+      "ADDRESS": "Gen. Maczka Stanisława 35",
+      "BRAND": "94-328 Lódz"
+    },
+    {
+      "PSD": "29604",
+      "NPSD": "Łódź Lotnisko Lublinek SO COFFEE",
+      "ADDRESS": "Gen. Maczka Stanisława",
+      "BRAND": "94-328 ŁÓDŹ"
+    },
+    {
+      "PSD": "29605",
+      "NPSD": "Bydgoszcz Port Lotniczy Bydgoszcz SO!COFFEE",
+      "ADDRESS": "Białe Błota",
+      "BRAND": "86-005 Biale Blota"
+    },
+    {
+      "PSD": "39105",
+      "NPSD": "Warszawa C.H. Złote Tarasy LOK.208",
+      "ADDRESS": "Złota 59",
+      "BRAND": "00-891 Warszawa"
+    },
+    {
+      "PSD": "39107",
+      "NPSD": "Warszawa C.H.Outlet Factory Ursus",
+      "ADDRESS": "Pl. Czerwca 1976 nr 6",
+      "BRAND": "02-495 Warszawa"
+    },
+    {
+      "PSD": "39108",
+      "NPSD": "Piaseczno C.H.Outlet",
+      "ADDRESS": "ul. Puławska 42E",
+      "BRAND": "05-500 Piaseczno k. Warszawy"
+    },
+    {
+      "PSD": "39112",
+      "NPSD": "Warszawa C.H. Galeria Mokotów",
+      "ADDRESS": "ul. Wołoska 12",
+      "BRAND": "02-675 Warszawa"
+    },
+    {
+      "PSD": "39116",
+      "NPSD": "Lublin C.H. Olimp",
+      "ADDRESS": "Al. Spółdzielczości Pracy 36",
+      "BRAND": "20-147 Lublin"
+    },
+    {
+      "PSD": "39119",
+      "NPSD": "Włocławek C.H. Wzorcownia Kilińskiego",
+      "ADDRESS": "ul. Kilińskiego 3",
+      "BRAND": "87-800 Włocławek"
+    },
+    {
+      "PSD": "39121",
+      "NPSD": "Warszawa C.H. Factory Annopol",
+      "ADDRESS": "Annopol 2",
+      "BRAND": "03-236 Warszawa"
+    },
+    {
+      "PSD": "39122",
+      "NPSD": "Piaseczno C.H. Auchan",
+      "ADDRESS": "ul. Puławska 46",
+      "BRAND": "05-500 Piaseczno k. Warszawy"
+    },
+    {
+      "PSD": "39123",
+      "NPSD": "Warszawa C.H. Pl. Czerwca 1976",
+      "ADDRESS": "Pl. Czerwca 1976 r. Warszawa",
+      "BRAND": "02-495 Warszawa"
+    },
+    {
+      "PSD": "39124",
+      "NPSD": "Lublin Outlet Center Mełgiewska",
+      "ADDRESS": "ul. Mełgiewska 16 D",
+      "BRAND": "20-234 Lublin"
+    },
+    {
+      "PSD": "39126",
+      "NPSD": "SO!COFFEE",
+      "ADDRESS": " Złote Tarasy -1",
+      "BRAND": "ul. Złota 59 lok. B02 i 009"
+    },
+    {
+      "PSD": "39206",
+      "NPSD": "Warszawa Ul. WFC Paul",
+      "ADDRESS": "Plater Emilii 53",
+      "BRAND": "00-113 Warszawa"
+    },
+    {
+      "PSD": "39207",
+      "NPSD": "Warszawa PKiN (XXX piętro) Plac Defilad 1 SO! COFFEE",
+      "ADDRESS": "ul. Plac Defilad 1",
+      "BRAND": "00-901 Warszawa"
+    },
+    {
+      "PSD": "39304",
+      "NPSD": "Dworzec Centralny",
+      "ADDRESS": " Al. Jerozolimskie 54 PAUL",
+      "BRAND": "Al. Jerozolimskie 54"
+    },
+    {
+      "PSD": "39606M",
+      "NPSD": "Warszawa Lotnisko Okęcie Magazyn - BShark",
+      "ADDRESS": "NULL",
+      "BRAND": "BUSINESS SHARK"
+    },
+    {
+      "PSD": "39607",
+      "NPSD": "Warszawa Okęcie Odloty Terminal 2 (przy Samych Swoich)",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39607M",
+      "NPSD": "Warszawa Okęcie Odloty Terminal 2 (przy Samych Swoich) Magazyn",
+      "ADDRESS": "NULL",
+      "BRAND": "VOYAGE CAFE"
+    },
+    {
+      "PSD": "39608M",
+      "NPSD": "Warszawa Lotnisko Okęcie Pirs Północny Magazyn - Voy",
+      "ADDRESS": "NULL",
+      "BRAND": "VOYAGE CAFE"
+    },
+    {
+      "PSD": "39613",
+      "NPSD": "Warszawa Lotnisko Chopina Johnny Rockets",
+      "ADDRESS": "Żwirki i Wigury 1",
+      "BRAND": "Lotnisko Okęcie"
+    },
+    {
+      "PSD": "39614",
+      "NPSD": "Lublin Lotnisko Świdnik BS",
+      "ADDRESS": "ul. Króla Jana III Sobieskiego 1",
+      "BRAND": "21-040 Świdnik k. Lublina"
+    },
+    {
+      "PSD": "39617M",
+      "NPSD": "Warszawa Lotnisko Okęcie Rest&Wine - MAGAZYN",
+      "ADDRESS": "NULL",
+      "BRAND": "Rest&Wine"
+    },
+    {
+      "PSD": "39619",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 The Flame",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39620",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 Furore",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39621",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 Papaya",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39622",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 Illy",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39623",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 MISA",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39623P",
+      "NPSD": "Warszawa Lotnisko Okęcie T1 MISA - PRODUKCJA",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39624",
+      "NPSD": "Radom Lotnisko Flying Bistro",
+      "ADDRESS": "ul.Lubelska 158",
+      "BRAND": "26-600 Radom"
+    },
+    {
+      "PSD": "39625",
+      "NPSD": "Radom Lotnisko SO COFFEE",
+      "ADDRESS": "Radom",
+      "BRAND": " ul Lubelska 158"
+    },
+    {
+      "PSD": "39627",
+      "NPSD": "Warszawa Lotnisko Okęcie PAUL",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": ""
+    },
+    {
+      "PSD": "39628",
+      "NPSD": "Warszawa",
+      "ADDRESS": " Lotnisko Chopina ul. Żwirki i Wigury 1 PAUL",
+      "BRAND": "ul. Żwirki i Wigury 1"
+    },
+    {
+      "PSD": "39629",
+      "NPSD": "Warszawa Lotnisko Chopina ul. Żwirki i Wigury 1 SO!COFFEE",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39630",
+      "NPSD": " Warszawa Lotnisko Chopina ul. Żwirki i Wigury 1 Misa Polskie Jedzenie",
+      "ADDRESS": "ul. Żwirki i Wigury 1",
+      "BRAND": "00-906 Warszawa"
+    },
+    {
+      "PSD": "39901",
+      "NPSD": "Warszawa New City",
+      "ADDRESS": "Marynarska 15",
+      "BRAND": "02-674 Warszawa"
+    },
+    {
+      "PSD": "49103",
+      "NPSD": "Opole C.H. Karolinka",
+      "ADDRESS": "ul. Wrocławska 154",
+      "BRAND": "45-837 Opole"
+    },
+    {
+      "PSD": "49104",
+      "NPSD": "Dąbrowa Górnicza C.H. Pogoria",
+      "ADDRESS": "ul. Sobieskiego 6 lokB139",
+      "BRAND": "41-300 Dąbrowa Górnicza"
+    },
+    {
+      "PSD": "49107",
+      "NPSD": "Częstochowa C.H. Galeria Jurajska",
+      "ADDRESS": "ul. Wojska Polskiego 207",
+      "BRAND": "42-200 Częstochowa"
+    },
+    {
+      "PSD": "49108",
+      "NPSD": "Sosnowiec C.H. Designer Outlet ul. Orląt Lwowskich",
+      "ADDRESS": "ul. Orląt Lwowskich 138",
+      "BRAND": "41-208 Sosnowiec"
+    },
+    {
+      "PSD": "49109",
+      "NPSD": "Katowice PKP Galeria Katowicka",
+      "ADDRESS": "Plac Wilhelma Szewczyka 1",
+      "BRAND": "40-098 Katowice"
+    },
+    {
+      "PSD": "49601",
+      "NPSD": "Pyrzowice Lotnisko Terminal A - Voy",
+      "ADDRESS": "ul. Wolności 90",
+      "BRAND": "42-625 Pyrzowice"
+    },
+    {
+      "PSD": "49603",
+      "NPSD": "Pyrzowice Lotnisko Terminal B - Vice",
+      "ADDRESS": "ul. Wolnosci 90",
+      "BRAND": "42-625 Pyrzowice"
+    },
+    {
+      "PSD": "49605",
+      "NPSD": "Pyrzowice Lotnisko Terminal B WOC - Flb",
+      "ADDRESS": "ul. Wolnosci 90 ",
+      "BRAND": "42-625 Pyrzowice"
+    },
+    {
+      "PSD": "49607",
+      "NPSD": "Pyrzowice Lotnisko SoCoffee",
+      "ADDRESS": "Wolnosci 90",
+      "BRAND": "42-625 Pyrzowice"
+    },
+    {
+      "PSD": "55601",
+      "NPSD": "Gdańsk Port Lotniczy im. Lecha Wałesy Imperial Club",
+      "ADDRESS": "ul. Julisza Słowackiego 200",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59103",
+      "NPSD": "Koszalin CH Atrium Koszalin",
+      "ADDRESS": "ul. Paderewskiego 1",
+      "BRAND": "75-037 Koszalin"
+    },
+    {
+      "PSD": "59104",
+      "NPSD": "Gdynia C. H. Klif",
+      "ADDRESS": "Al. Zwycięstwa 256",
+      "BRAND": "81-525 Gdynia"
+    },
+    {
+      "PSD": "59105",
+      "NPSD": "Gdańsk C.H. Designer Outlet Gdańsk ul. Przywidzka 8",
+      "ADDRESS": "ul. Przywidzka 8",
+      "BRAND": "80-174 Gdańsk"
+    },
+    {
+      "PSD": "59108",
+      "NPSD": "Koszalin C.H. Atrium Furore",
+      "ADDRESS": "ul. Paderewskiego 1",
+      "BRAND": "75-736 Koszalin"
+    },
+    {
+      "PSD": "59109",
+      "NPSD": "Słupsk C.H. Jantar SOC",
+      "ADDRESS": "Szczecińska 58",
+      "BRAND": "76-200 Słupsk"
+    },
+    {
+      "PSD": "59301",
+      "NPSD": "Gdynia Plac Konstytucji 1",
+      "ADDRESS": "Pl. Konstytucji 1",
+      "BRAND": "81-354 Gdynia"
+    },
+    {
+      "PSD": "59603",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo Terminal 2 Empik Cafe",
+      "ADDRESS": "ul. Słowackiego 200 Terminal 2",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59604",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo Terminal 2 The Flame",
+      "ADDRESS": "ul. Słowackiego 200 Terminal 2",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59604M",
+      "NPSD": "Gdansk Lotnisko Rębiechowo Terminal 2 The Flame-MAGAZYN",
+      "ADDRESS": "NULL",
+      "BRAND": "THE FLAME"
+    },
+    {
+      "PSD": "59605",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo Business Shark",
+      "ADDRESS": "Gdańsk ul.Słowackiego 200",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59606",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo T1 FB",
+      "ADDRESS": "ul. Słowackiego 200",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59607",
+      "NPSD": "Szymany Lotnisko Flying Bistro Olsztyn-Mazury",
+      "ADDRESS": "ul. Szymany 150",
+      "BRAND": "12-100 Szczytno"
+    },
+    {
+      "PSD": "59608",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo Furore",
+      "ADDRESS": "ul. Słowackiegi 200",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59610",
+      "NPSD": "Gdańsk Lotnisko Rębiechowo PAUL",
+      "ADDRESS": "ul. Słowackiego 200",
+      "BRAND": "80-298 Gdańsk"
+    },
+    {
+      "PSD": "59612",
+      "NPSD": "Gdańsk Lotnisko Rębichowo Flying Bistro",
+      "ADDRESS": "NULL",
+      "BRAND": "Flying Bistro"
+    },
+    {
+      "PSD": "69103",
+      "NPSD": "Poznań C.H. Stary Browar (In)",
+      "ADDRESS": "ul. Półwiejska 42",
+      "BRAND": "61-888 Poznań"
+    },
+    {
+      "PSD": "69105",
+      "NPSD": "Luboń C. H. Factory Outlet",
+      "ADDRESS": "ul. Dębicka 1",
+      "BRAND": "62-030 Luboń"
+    },
+    {
+      "PSD": "69106",
+      "NPSD": "Poznań C.H. Plaza",
+      "ADDRESS": "Ul. Drużbickiego 2",
+      "BRAND": "61-693 Poznań"
+    },
+    {
+      "PSD": "69108",
+      "NPSD": "Szczecin C.H. Outlet Park",
+      "ADDRESS": "A. Struga 42",
+      "BRAND": "70-784 Szczecin"
+    },
+    {
+      "PSD": "69111",
+      "NPSD": "Luboń C.H. Factory Outlet Furore",
+      "ADDRESS": "ul. Dębiecka 1. 62 - 030 Luboń",
+      "BRAND": "62-030 Luboń"
+    },
+    {
+      "PSD": "69113",
+      "NPSD": "Poznań CH Avenida SO! COFFE",
+      "ADDRESS": "Ul. Matyi 2",
+      "BRAND": "61-586 Poznań"
+    },
+    {
+      "PSD": "69114",
+      "NPSD": "Kalisz C.H. Tęcza Furore",
+      "ADDRESS": "ul. Nowy Rynek 9 ",
+      "BRAND": "62-800 Kalisz"
+    },
+    {
+      "PSD": "69601",
+      "NPSD": "Szczecin Lotnisko Goleniów",
+      "ADDRESS": "Glewice 1a",
+      "BRAND": "72-100 Goleniów"
+    },
+    {
+      "PSD": "69602",
+      "NPSD": "Szczecin Lotnisko Goleniów",
+      "ADDRESS": "Glewice 1a",
+      "BRAND": "72-100 Goleniów"
+    },
+    {
+      "PSD": "69605",
+      "NPSD": "Poznań Lotnisko Ławica So Coffee",
+      "ADDRESS": "ul. Bukowska 285",
+      "BRAND": "60-189 Poznań"
+    },
+    {
+      "PSD": "69606",
+      "NPSD": "Szczecin Lotnisko Goleniów SO COFFEE",
+      "ADDRESS": "Glewice 1a",
+      "BRAND": "72-100 Goleniów"
+    },
+    {
+      "PSD": "69607",
+      "NPSD": "Szczecin Lotnisko Goleniów Voyage Cafe",
+      "ADDRESS": "Glewice 1a",
+      "BRAND": "72-100 Goleniów"
+    },
+    {
+      "PSD": "69608",
+      "NPSD": "Poznań Lotnisko Ławica So Coffee EXPRESS",
+      "ADDRESS": "ul. Bukowska 285",
+      "BRAND": "60-189 Poznań"
+    },
+    {
+      "PSD": "69609",
+      "NPSD": "Bread & Co Lotnisko Szczecin Goleniów",
+      "ADDRESS": "Glewice 1 ",
+      "BRAND": "72-100 Goleniów"
+    },
+    {
+      "PSD": "79102",
+      "NPSD": "Kraków C.H Bonarka ul.Puszkarska",
+      "ADDRESS": "ul. Kamienskiego 11",
+      "BRAND": "30-644 Kraków"
+    },
+    {
+      "PSD": "79103",
+      "NPSD": "Bielsko-Biała C.H Mostowa 5",
+      "ADDRESS": "ul. Mostowa 5",
+      "BRAND": "43-300 Bielsko Biała"
+    },
+    {
+      "PSD": "79105",
+      "NPSD": "Kraków C.H. Futura Park Modlniczka Wielka Wieś",
+      "ADDRESS": "Ul. Prof. A. Różańskiego 32",
+      "BRAND": "32-085 Modlniczka"
+    },
+    {
+      "PSD": "79107",
+      "NPSD": "Kraków C.H. Bronowice lok. 174",
+      "ADDRESS": "Stawowa/Sosnowiecka",
+      "BRAND": "30-644 Kraków"
+    },
+    {
+      "PSD": "79108",
+      "NPSD": "Modlniczka C.H. Futura Park",
+      "ADDRESS": "ul. Prof. A. Różańskiego 32",
+      "BRAND": "32-085 Modlnica"
+    },
+    {
+      "PSD": "79109",
+      "NPSD": "Kraków Modlniczka Outlet Futura Park Furore",
+      "ADDRESS": "ul. Prof. Adama Rożańskiego 32",
+      "BRAND": "32-085 Modlniczka"
+    },
+    {
+      "PSD": "79602",
+      "NPSD": "Rzeszów Lotnisko Jasionka 942 Flying Bistro",
+      "ADDRESS": "Jasionka k. Rzeszowa",
+      "BRAND": "36-002 Jasionka k. Rzeszowa"
+    },
+    {
+      "PSD": "79603",
+      "NPSD": "Kraków Lotnisko Balice - SoCoffee",
+      "ADDRESS": "ul. Kapitana Mieczysława Medweckiego 1",
+      "BRAND": "32-083 Balice k. Krakowa"
+    },
+    {
+      "PSD": "89101",
+      "NPSD": "Kielce C.H. Echo ul. Świętokrzyska",
+      "ADDRESS": "ul. Świętokrzyska 20",
+      "BRAND": "25-506 Kielce"
+    },
+    {
+      "PSD": "89102",
+      "NPSD": "Kielce C.H. Galeria Korona",
+      "ADDRESS": "Warszawska 26",
+      "BRAND": "25-317 Kielce"
+    },
+    {
+      "PSD": "89103",
+      "NPSD": "Białystok C.H. Atrium Biała SoCoffee",
+      "ADDRESS": "ul. Czesława Miłosza 2",
+      "BRAND": "15-265 Białystok"
+    }
   ]
 }

@@ -22,7 +22,6 @@ export class UserDetailComponent implements OnInit {
   constructor(private userService:UsersService) { }
 
   ngOnInit() {
-    console.log('user-detail')
   }
 
 }

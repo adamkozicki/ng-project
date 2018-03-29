@@ -27,16 +27,4 @@ export class UserCardComponent implements OnInit {
       }
     })
   }
-  
-
-  // ngOnInit() {
-
-  //   let id = this.activeRoute.snapshot.params['id'];
-  //   console.log(id + "adam")
-  //   this.usersService.getUser(id)
-  //   .subscribe(user => {
-  //     this.user = user;
-  //   })
-  // }
-
 }
